@@ -217,16 +217,16 @@ const ImageModal = ({ images, index, onClose, setIndex }: { images: string[], in
       {images.length > 1 && (
         <>
           <button 
-            className="absolute left-6 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors z-[110]"
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors z-[110] md:left-6 md:p-4"
             onClick={(e) => { e.stopPropagation(); setIndex((index - 1 + images.length) % images.length); }}
           >
-            <ChevronLeft className="w-8 h-8" />
+            <ChevronLeft className="w-6 h-6 md:w-8 md:h-8" />
           </button>
           <button 
-            className="absolute right-6 top-1/2 -translate-y-1/2 p-4 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors z-[110]"
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-3 rounded-full bg-white/5 text-white hover:bg-white/10 transition-colors z-[110] md:right-6 md:p-4"
             onClick={(e) => { e.stopPropagation(); setIndex((index + 1) % images.length); }}
           >
-            <ChevronRight className="w-8 h-8" />
+            <ChevronRight className="w-6 h-6 md:w-8 md:h-8" />
           </button>
         </>
       )}
