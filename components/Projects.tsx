@@ -24,38 +24,38 @@ const projectsData = [
   {
     title: 'Vedic Success – Spiritual Tech',
     type: 'professional',
-    description: 'Bridges spiritual laws and neuroscience to decode human potential using the VSLR algorithm and RAS optimization.',
+    description: 'Where Ancient Wisdom Meets Modern Neuroscience. Decoding life through 231 precise parameters using VSLR algorithm.',
     tags: ['Neuroscience', 'Algorithm', 'Data-Driven', 'Consulting'],
-    liveUrl: '#',
+    liveUrl: 'https://www.vedicsuccess.com/',
     image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800",
-    features: ['231-Point VSLR AI', 'RAS Optimization', '7-Dimension Guidance', 'Neurochemistry Focus']
+    features: ['231-Point VSLR AI', 'RAS Optimization', '7-Dimension Success', 'Unified Theory of Life']
   },
   {
     title: 'E8 Productions – Media Agency',
     type: 'professional',
-    description: 'Content strategy and media agency with 743M+ views. Specializes in E8 Original shows and automated workflows.',
-    tags: ['Media Production', 'Content Strategy', 'IP Development', 'UGC'],
-    liveUrl: '#',
+    description: 'Specializing in end-to-end social media and content solutions, strategy, video production, and original show development.',
+    tags: ['Media Production', 'Content Strategy', 'Social Media', 'UGC'],
+    liveUrl: 'https://www.e8productions.com/',
     image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
-    features: ['743M+ Client Views', '205% Business Growth', 'E8 Original IP', 'Automated Posting']
+    features: ['Strategic Content', 'Video Production', 'Original Show Production', 'Social Media Mgmt']
   },
   {
-    title: 'ECONS EXIM – Global Trade',
+    title: 'ECONS EXIM GATEWAY',
     type: 'professional',
-    description: 'AI-powered export/import ecosystem connected to AECCI with automated compliance and trade documentation.',
+    description: 'AI-powered export/import gateway providing a one-window solution for global trade compliance and documentation.',
     tags: ['AI Trade', 'Compliance', 'Logistics', 'FinTech'],
-    liveUrl: '#',
+    liveUrl: 'https://econs.egcindia.in/',
     image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=800",
-    features: ['AI HS Validation', 'Real-time GPS Tracking', 'Escrow Payments', 'One-Window Solution']
+    features: ['Trade Compliance', 'Logistics Automation', 'HS Validation', 'Secure Documentation']
   },
   {
-    title: 'GoShah Rental – Premium Mobility',
+    title: 'GoShah – Premium Car Rentals',
     type: 'professional',
-    description: 'Luxury vehicle rental platform for corporate/personal use with 4-step digital workflow and WhatsApp booking.',
-    tags: ['Mobility', 'Automation', 'Inventory Mgmt', 'WhatsApp Bot'],
-    liveUrl: '#',
+    description: 'Experience luxury at every mile with Mumbai\'s elite car rental service featuring a premium fleet and transparent pricing.',
+    tags: ['Mobility', 'Luxury Rental', '24/7 Support', 'Mumbai'],
+    liveUrl: 'https://goshahrental.netlify.app/',
     image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
-    features: ['4-Step Booking Flow', 'Instant WhatsApp Sync', 'Live Fleet Tracking', 'Zero Hidden Fees']
+    features: ['Premium Fleet', 'Transparent Pricing', 'Doorstep Delivery', '24/7 Assistance']
   },
 
   // Personal Projects
