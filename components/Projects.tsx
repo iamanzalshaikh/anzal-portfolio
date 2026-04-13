@@ -2,6 +2,7 @@
 
 import { motion, AnimatePresence } from "framer-motion";
 import Link from "next/link";
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
@@ -126,7 +127,7 @@ const projectsData = [
     description: 'Real-time wind turbine vibration data visualization and forecasting using integrated ML models.',
     tags: ['React.js', 'ML', 'Recharts', 'Express'],
     liveUrl: 'https://vibration-q6co.onrender.com/',
-    image: "https://images.unsplash.com/photo-1518186239717-2e9b1367444d?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80&w=800",
     features: ['ML Predictions', 'Anomaly Detection', 'CSV Export', 'Live Charts']
   },
   {
@@ -144,7 +145,7 @@ const projectsData = [
     description: 'Intelligent AI assistant with advanced conversational capabilities and smart response logic.',
     tags: ['AI Integration', 'React.js', 'Node.js', 'NLP'],
     liveUrl: 'https://upload-qvpb.onrender.com/',
-    image: "https://images.unsplash.com/photo-1531746790731-6c430932da97?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800",
     features: ['Smart NLP', 'Real-time UI', 'User Context', 'Fast Scaling']
   },
   {
@@ -187,13 +188,19 @@ const projectsData = [
 
 const ImageSlider = ({ images, onImageClick, objectFit = 'cover' }: { images: string[], onImageClick?: (index: number) => void, objectFit?: 'cover' | 'contain' }) => {
   const [index, setIndex] = useState(0);
+  const MotionImage = motion(Image);
 
   return (
     <div className="relative w-full h-full overflow-hidden group/slider">
       <AnimatePresence mode="wait">
-        <motion.img
+        <MotionImage
           key={index}
           src={images[index]}
+          alt="Project preview"
+          fill
+          sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+          quality={70}
+          loading="lazy"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
@@ -275,18 +282,19 @@ const ImageModal = ({ images, index, onClose, setIndex }: { images: string[], in
       )}
 
       <motion.div 
-        className="relative max-w-[90vw] max-h-[85vh] flex items-center justify-center"
+        className="relative w-[92vw] h-[88vh] max-w-[1400px] flex items-center justify-center"
         onClick={(e) => e.stopPropagation()}
       >
         <AnimatePresence mode="wait">
           <motion.img
             key={index}
             src={images[index]}
+            alt="Project screenshot full view"
             initial={{ opacity: 0, scale: 0.9, y: 20 }}
             animate={{ opacity: 1, scale: 1, y: 0 }}
             exit={{ opacity: 0, scale: 0.9, y: -20 }}
             transition={{ type: "spring", damping: 25, stiffness: 200 }}
-            className="w-full h-full object-contain rounded-xl shadow-2xl"
+            className="max-w-full max-h-full w-auto h-auto object-contain rounded-xl shadow-2xl"
           />
         </AnimatePresence>
         
@@ -406,9 +414,13 @@ const Projects = () => {
                     objectFit={project.objectFit as any}
                   />
                 ) : (
-                  <img 
+                  <Image
                     src={project.image} 
                     alt={project.title} 
+                    fill
+                    sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                    quality={70}
+                    loading="lazy"
                     className={`w-full h-full ${project.objectFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700 cursor-zoom-in`} 
                     onClick={() => openModal([project.image!])}
                   />
