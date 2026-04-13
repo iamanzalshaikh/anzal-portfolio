@@ -8,6 +8,49 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 const projectsData = [
   // Professional Projects
   {
+    title: 'AQC - Grievance Mobile Application',
+    type: 'professional',
+    description: 'Full-stack grievance mobile application with real-time status sync, queue-driven workflows, and secure multi-role complaint lifecycles.',
+    tags: ['Mobile App', 'Node.js', 'Express', 'MongoDB'],
+    liveUrl: '#',
+    images: [
+      "/projects/aqc/aqc_1.png",
+      "/projects/aqc/aqc_2.png",
+      "/projects/aqc/aqc_3.png",
+      "/projects/aqc/aqc_4.png",
+    ],
+    objectFit: 'contain',
+    features: ['Citizen/Admin/Officer RBAC', 'Redis Caching Layer', 'BullMQ Async Pipelines', 'Socket.IO Live Updates']
+  },
+  {
+    title: 'Nailify - Beauty Booking Mobile Application',
+    type: 'professional',
+    description: 'Real-time beauty service booking mobile application with live status, resilient background processing, and production-grade auth/notifications.',
+    tags: ['Mobile App', 'Node.js', 'Express', 'MongoDB'],
+    liveUrl: '#',
+    images: [
+      "/projects/nailify/n_1.png",
+      "/projects/nailify/n_2.png",
+      "/projects/nailify/n_3.png",
+      "/projects/nailify/n_4.png",
+      "/projects/nailify/n_5.png",
+      "/projects/nailify/n_6.png",
+      "/projects/nailify/n_7.png",
+      "/projects/nailify/n_8.png",
+    ],
+    objectFit: 'contain',
+    features: ['Live Booking Status', 'BullMQ + Redis Jobs', 'JWT + RBAC Security', 'Persistent Notification Engine']
+  },
+  {
+    title: 'SchoolFMS - Multi-Tenant SaaS',
+    type: 'professional',
+    description: 'Scalable school management SaaS with tenant-isolated architecture, RBAC, secure APIs, and complete finance + operations visibility.',
+    tags: ['Node.js', 'Express', 'Prisma', 'PostgreSQL'],
+    liveUrl: 'https://schoolfms.com/',
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
+    features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
+  },
+  {
     title: 'HerRidez (React Native)',
     type: 'professional',
     description: 'A production-grade ride tracking platform for women with real-time GPS, SOS safety, and an event-driven social layer.',
@@ -142,7 +185,7 @@ const projectsData = [
   }
 ];
 
-const ImageSlider = ({ images, onImageClick }: { images: string[], onImageClick?: (index: number) => void }) => {
+const ImageSlider = ({ images, onImageClick, objectFit = 'cover' }: { images: string[], onImageClick?: (index: number) => void, objectFit?: 'cover' | 'contain' }) => {
   const [index, setIndex] = useState(0);
 
   return (
@@ -155,7 +198,7 @@ const ImageSlider = ({ images, onImageClick }: { images: string[], onImageClick?
           animate={{ opacity: 1, x: 0 }}
           exit={{ opacity: 0, x: -20 }}
           transition={{ duration: 0.3 }}
-          className="w-full h-full object-cover cursor-zoom-in"
+          className={`w-full h-full ${objectFit === 'contain' ? 'object-contain' : 'object-cover'} cursor-zoom-in`}
           onClick={() => onImageClick?.(index)}
         />
       </AnimatePresence>
@@ -355,17 +398,18 @@ const Projects = () => {
               className="group relative flex flex-col bg-surface-dark border border-slate-800 rounded-2xl overflow-hidden hover:border-primary/40 transition-all duration-500 shadow-lg hover:shadow-[0_20px_50px_-10px_rgba(0,0,0,0.5)]"
             >
               {/* Compact Image Header with Slider Support */}
-              <div className="relative aspect-[16/9] overflow-hidden">
+              <div className="relative aspect-[16/9] overflow-hidden bg-black/20">
                 {project.images ? (
                   <ImageSlider 
                     images={project.images} 
                     onImageClick={(idx) => openModal(project.images!, idx)}
+                    objectFit={project.objectFit as any}
                   />
                 ) : (
                   <img 
                     src={project.image} 
                     alt={project.title} 
-                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 cursor-zoom-in" 
+                    className={`w-full h-full ${project.objectFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700 cursor-zoom-in`} 
                     onClick={() => openModal([project.image!])}
                   />
                 )}
