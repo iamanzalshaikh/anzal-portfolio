@@ -101,6 +101,75 @@ const projectsData = [
     image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
     features: ['Premium Fleet', 'Transparent Pricing', 'Doorstep Delivery', '24/7 Assistance']
   },
+  {
+    title: 'Elysian – Premium Fashion Storefront',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A high-end editorial premium fashion e-commerce storefront showcasing quiet luxury, curated collections, and an interactive lookbook experience.',
+    tags: ['E-Commerce', 'Next.js', 'Framer Motion', 'Tailwind CSS'],
+    liveUrl: 'https://69ff8d6bc3bdc61c33c7dfff--calm-kitsune-2dc38e.netlify.app/',
+    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800",
+    features: ['SS26 Atelier lookbook', 'Ethical & Small-Batch Focus', 'Editorial UI Animations', 'Interactive Style Feed']
+  },
+  {
+    title: 'Hiranandani Westgate – Luxury Real Estate',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A premium, high-conviction real estate showcase page designed for Thane’s iconic 25-acre destination residential project.',
+    tags: ['Real Estate', 'Landing Page', 'Interactive Map', 'Premium UI'],
+    liveUrl: 'https://69d79d5d77b5e3567bda1fce--euphonious-lokum-8ffe2b.netlify.app/',
+    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
+    features: ['3 Thematic Amenity Zones', 'IGBC Gold Rated Outline', 'Executive Portfolio Snapshot', 'Clubhouse & Podium Tour']
+  },
+  {
+    title: 'CIMDR Sangli – Higher Ed Institution Portal',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A modern, responsive educational portal for Chintamanrao Institute of Management Development and Research showcasing courses, placements, and campus admissions.',
+    tags: ['EdTech', 'Higher Education', 'Responsive Portal', 'React.js'],
+    liveUrl: 'https://glittery-kulfi-0fb52f.netlify.app/',
+    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800",
+    features: ['AICTE/NAAC Program Guide', 'Verified Recruiter Portfolio', 'Mock Test & CET Registration', '125-Acre Legacy Overview']
+  },
+  {
+    title: 'Car Bazar – Exclusive Car Rental Experience',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A seamless, premium vehicle rental landing page offering curated luxury SUVs and high-performance cars with a doorstep delivery setup.',
+    tags: ['Car Rental', 'Luxury Mobility', 'Landing Page', 'Framer Motion'],
+    liveUrl: 'https://dancing-cajeta-881cb6.netlify.app/',
+    image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800",
+    features: ['60-Second Fast Booking', 'Verified Luxury SUV Fleet', 'Flexible Delivery Schedules', 'Comprehensive Cover Details']
+  },
+  {
+    title: 'WebYapar Solutions – IT Consulting & Digital Engineering',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A premium, modern corporate portal for a digital agency specializing in custom SaaS development, e-commerce, and advanced AI-driven workflow automations.',
+    tags: ['IT Services', 'SaaS', 'Corporate Web', 'AI Automation'],
+    liveUrl: 'https://webyaparsolutions.com/',
+    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    features: ['Bespoke Software Design', 'AI-Powered System Solutions', 'Integrated Tech Marketing', 'Client Operations Growth']
+  },
+  {
+    title: 'WebCastle UAE – Premier Web Engineering Agency',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'A premium corporate showcase landing page for an international website and software development agency in the UAE, designed to capture leads, showcase technical integrations, and drive brand credibility.',
+    tags: ['Agency Portal', 'React.js', 'Headless CMS', 'Modern UI'],
+    liveUrl: 'https://willowy-heliotrope-8af7b2.netlify.app/',
+    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=800",
+    features: ['Interactive Quote Estimator', 'Tech Stack Integration Matrix', 'Agile Process Flow Map', 'Premium UAE Corporate Style']
+  },
+  {
+    title: 'LetsCrack – Premium MCQ & Test Preparation Platform',
+    type: 'professional',
+    description: 'A production-grade, highly interactive online assessment and test preparation platform featuring full-screen MCQ test players, real-time grading, detailed feedback loops, and robust user dashboards.',
+    tags: ['React.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
+    liveUrl: 'https://letscrack-frontend.onrender.com/',
+    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    features: ['Dynamic MCQ Test Player', 'Real-time Result Analytics', 'Stateful Session Recovery', 'Admin Dashboard & RBAC']
+  },
 
   // Personal Projects
   {
@@ -181,7 +250,7 @@ const projectsData = [
     description: 'Robust task tracking system with distinct admin/employee roles and local persistence.',
     tags: ['React.js', 'localStorage', 'Role Logic'],
     liveUrl: 'https://employemanagamentsystem1.onrender.com',
-    image: "https://images.unsplash.com/photo-1454165833772-d99624ad55da?auto=format&fit=crop&q=80&w=800",
+    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
     features: ['Admin Control', 'Task Tracking', 'Local Save', 'Protected Routes']
   }
 ];
@@ -199,7 +268,7 @@ const ImageSlider = ({ images, onImageClick, objectFit = 'cover' }: { images: st
           alt="Project preview"
           fill
           sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-          quality={70}
+          quality={75}
           loading="lazy"
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -319,9 +388,11 @@ const Projects = () => {
   const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const filteredProjects = projectsData.filter(p => 
-    filter === "all" ? true : p.type === filter
-  );
+  const filteredProjects = projectsData.filter(p => {
+    if (filter === "all") return true;
+    if (filter === "landing-page") return (p as any).isLandingPage || p.type === "landing-page";
+    return p.type === filter;
+  });
 
   const openModal = (images: string[], index: number = 0) => {
     setSelectedImages(images);
@@ -376,6 +447,7 @@ const Projects = () => {
           {[
             { id: "all", label: "All Cases" },
             { id: "professional", label: "Professional" },
+            { id: "landing-page", label: "Landing Pages" },
             { id: "personal", label: "Personal" }
           ].map((tab) => (
             <button
@@ -419,7 +491,7 @@ const Projects = () => {
                     alt={project.title} 
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                    quality={70}
+                    quality={75}
                     loading="lazy"
                     className={`w-full h-full ${project.objectFit === 'contain' ? 'object-contain' : 'object-cover'} group-hover:scale-105 transition-transform duration-700 cursor-zoom-in`} 
                     onClick={() => openModal([project.image!])}
@@ -428,9 +500,13 @@ const Projects = () => {
                 <div className="absolute inset-0 bg-gradient-to-t from-background-dark/60 via-transparent to-transparent opacity-40 group-hover:opacity-60 transition-opacity pointer-events-none" />
                 <div className="absolute top-3 right-3 z-20">
                   <span className={`px-2 py-0.5 text-[9px] font-bold rounded uppercase tracking-widest ${
-                    project.type === 'professional' ? 'bg-primary/20 text-primary border border-primary/30' : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                    (project as any).isLandingPage 
+                      ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
+                      : project.type === 'professional' 
+                        ? 'bg-primary/20 text-primary border border-primary/30' 
+                        : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                   }`}>
-                    {project.type}
+                    {(project as any).isLandingPage ? 'landing page' : project.type}
                   </span>
                 </div>
               </div>
