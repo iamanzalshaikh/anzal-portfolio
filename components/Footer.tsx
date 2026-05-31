@@ -22,6 +22,7 @@ const Footer = () => {
               {[
                 { name: "About", href: "/about" },
                 { name: "Skills", href: "/skills" },
+                { name: "Mobile Apps", href: "/mobile-apps" },
                 { name: "Projects", href: "/projects" },
                 { name: "Experience", href: "/experience" }
               ].map((item) => (

@@ -27,8 +27,8 @@ const Terminal = () => {
             <div className="w-3 h-3 rounded-full bg-yellow-500/50" />
             <div className="w-3 h-3 rounded-full bg-green-500/50" />
           </div>
-          <span className="text-xs text-slate-500 uppercase tracking-widest">zsh — anzal@shaikh-pro</span>
-          <div className="w-10" />
+          <span className="text-[10px] sm:text-xs text-slate-500 uppercase tracking-widest truncate max-w-[180px] sm:max-w-none">zsh — anzal@shaikh-pro</span>
+          <div className="w-4 sm:w-10" />
         </div>
         
         {/* Terminal Body */}

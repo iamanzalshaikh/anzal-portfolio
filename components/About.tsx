@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const About = () => {
   return (
@@ -49,18 +50,20 @@ const About = () => {
             <motion.button 
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
-              className="group relative px-8 py-4 bg-primary text-background-dark font-bold rounded-lg overflow-hidden transition-all shadow-[0_0_20px_rgba(0,217,255,0.3)]"
+              className="group relative px-8 py-4 bg-primary text-background-dark font-bold rounded-lg overflow-hidden transition-all shadow-[0_0_20px_rgba(0,217,255,0.3)] w-full sm:w-auto"
             >
-              <span className="relative z-10 flex items-center gap-2">
+              <span className="relative z-10 flex items-center justify-center gap-2">
                 Download CV 
                 <span className="material-icons text-sm group-hover:translate-y-1 transition-transform">download</span>
               </span>
               <div className="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
             </motion.button>
-            <button className="px-8 py-4 bg-transparent border border-slate-700 hover:border-primary text-white font-medium rounded-lg transition-colors flex items-center gap-2">
-              View Projects
-              <span className="material-icons text-sm">arrow_forward</span>
-            </button>
+            <Link href="/projects" className="w-full sm:w-auto">
+              <button className="w-full px-8 py-4 bg-transparent border border-slate-700 hover:border-primary text-white font-medium rounded-lg transition-colors flex items-center justify-center gap-2">
+                View Projects
+                <span className="material-icons text-sm">arrow_forward</span>
+              </button>
+            </Link>
           </div>
         </div>
 
@@ -80,13 +83,13 @@ const About = () => {
                 { label: "Lines of Code", value: "50k+", icon: "code" },
               ].map((stat, idx) => (
                 <div key={idx} className="group">
-                  <div className="flex items-center gap-6">
-                    <div className="w-16 h-16 rounded-xl bg-background-dark flex items-center justify-center group-hover:bg-primary/10 transition-colors">
-                      <span className="material-icons text-3xl text-slate-500 group-hover:text-primary transition-colors">{stat.icon}</span>
+                  <div className="flex items-center gap-4 sm:gap-6">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 flex-shrink-0 rounded-xl bg-background-dark flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+                      <span className="material-icons text-2xl sm:text-3xl text-slate-500 group-hover:text-primary transition-colors">{stat.icon}</span>
                     </div>
                     <div>
-                      <div className="text-4xl font-bold text-white group-hover:text-primary transition-colors">{stat.value}</div>
-                      <div className="text-sm font-medium text-slate-500 uppercase tracking-wide">{stat.label}</div>
+                      <div className="text-3xl sm:text-4xl font-bold text-white group-hover:text-primary transition-colors">{stat.value}</div>
+                      <div className="text-[10px] sm:text-sm font-medium text-slate-500 uppercase tracking-wide">{stat.label}</div>
                     </div>
                   </div>
                   {idx < 2 && <div className="mt-8 w-full h-px bg-slate-800" />}

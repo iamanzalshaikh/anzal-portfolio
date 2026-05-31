@@ -6,11 +6,51 @@ import Image from "next/image";
 import { useState, useEffect } from "react";
 import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
-const projectsData = [
+interface ProjectItem {
+  title: string;
+  type: string;
+  description: string;
+  tags: string[];
+  liveUrl: string;
+  image?: string;
+  images?: string[];
+  isLandingPage?: boolean;
+  objectFit?: string;
+  features: string[];
+}
+
+const projectsData: ProjectItem[] = [
   // Professional Projects
   {
-    title: 'AQC - Grievance Mobile Application',
+    title: 'WearUp – Premium Clothing Storefront',
     type: 'professional',
+    description: 'A high-end editorial digital retail platform featuring real-time product queries, an interactive shopping cart, custom-tailored collection cataloging, and an immersive checkout flow.',
+    tags: ['React.js', 'Node.js', 'Redux Toolkit', 'Tailwind CSS', 'MongoDB'],
+    liveUrl: 'https://clothing-frontend-zqt8.onrender.com/',
+    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
+    features: ['Dynamic Cart & Checkout', 'Admin Product Management', 'JWT Secure Session Auth', 'High-Performance Image Optimization']
+  },
+  {
+    title: 'ApexPOS – Next-Gen Point of Sale Solution',
+    type: 'saas',
+    description: 'An enterprise-grade point-of-sale system for businesses. Streamlines invoicing, order-taking, live stock tracking, and sales operations with lightning-fast reactive dashboards.',
+    tags: ['React.js', 'TypeScript', 'Recharts', 'Express', 'Tailwind CSS'],
+    liveUrl: 'https://pos-frontend-rudu.onrender.com/',
+    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
+    features: ['Lightning-fast Billing Grid', 'Real-time Stock Tracking', 'Rich Revenue Analytics', 'Multi-Terminal Syncing']
+  },
+  {
+    title: 'SchoolFMS - Multi-Tenant SaaS',
+    type: 'saas',
+    description: 'Scalable school management SaaS with tenant-isolated architecture, RBAC, secure APIs, and complete finance + operations visibility.',
+    tags: ['Node.js', 'Express', 'Prisma', 'PostgreSQL'],
+    liveUrl: 'https://schoolfms.com/',
+    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
+    features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
+  },
+  {
+    title: 'AQC - Grievance Mobile Application',
+    type: 'mobile',
     description: 'Full-stack grievance mobile application with real-time status sync, queue-driven workflows, and secure multi-role complaint lifecycles.',
     tags: ['Mobile App', 'Node.js', 'Express', 'MongoDB'],
     liveUrl: '#',
@@ -25,7 +65,7 @@ const projectsData = [
   },
   {
     title: 'Nailify - Beauty Booking Mobile Application',
-    type: 'professional',
+    type: 'mobile',
     description: 'Real-time beauty service booking mobile application with live status, resilient background processing, and production-grade auth/notifications.',
     tags: ['Mobile App', 'Node.js', 'Express', 'MongoDB'],
     liveUrl: '#',
@@ -43,17 +83,8 @@ const projectsData = [
     features: ['Live Booking Status', 'BullMQ + Redis Jobs', 'JWT + RBAC Security', 'Persistent Notification Engine']
   },
   {
-    title: 'SchoolFMS - Multi-Tenant SaaS',
-    type: 'professional',
-    description: 'Scalable school management SaaS with tenant-isolated architecture, RBAC, secure APIs, and complete finance + operations visibility.',
-    tags: ['Node.js', 'Express', 'Prisma', 'PostgreSQL'],
-    liveUrl: 'https://schoolfms.com/',
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
-    features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
-  },
-  {
     title: 'HerRidez (React Native)',
-    type: 'professional',
+    type: 'mobile',
     description: 'A production-grade ride tracking platform for women with real-time GPS, SOS safety, and an event-driven social layer.',
     tags: ['React Native', 'Node.js', 'Redis', 'BullMQ', 'Socket.io'],
     liveUrl: '#',
@@ -443,17 +474,19 @@ const Projects = () => {
         </div>
 
         {/* Filter Tabs */}
-        <div className="inline-flex bg-surface-dark p-1.5 rounded-xl border border-slate-800 shadow-sm relative z-10">
+        <div className="flex overflow-x-auto max-w-full no-scrollbar bg-surface-dark p-1.5 rounded-xl border border-slate-800 shadow-sm relative z-10 gap-1 select-none whitespace-nowrap scroll-smooth">
           {[
             { id: "all", label: "All Cases" },
+            { id: "saas", label: "SaaS Products" },
             { id: "professional", label: "Professional" },
             { id: "landing-page", label: "Landing Pages" },
+            { id: "mobile", label: "Mobile Apps" },
             { id: "personal", label: "Personal" }
           ].map((tab) => (
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id)}
-              className={`px-6 py-2.5 rounded-lg text-sm font-bold transition-all duration-300 ${
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 flex-shrink-0 ${
                 filter === tab.id 
                   ? "bg-primary text-background-dark shadow-glow" 
                   : "text-slate-400 hover:text-primary"
@@ -487,7 +520,7 @@ const Projects = () => {
                   />
                 ) : (
                   <Image
-                    src={project.image} 
+                    src={project.image!} 
                     alt={project.title} 
                     fill
                     sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
@@ -502,11 +535,15 @@ const Projects = () => {
                   <span className={`px-2 py-0.5 text-[9px] font-bold rounded uppercase tracking-widest ${
                     (project as any).isLandingPage 
                       ? 'bg-purple-500/20 text-purple-400 border border-purple-500/30'
-                      : project.type === 'professional' 
-                        ? 'bg-primary/20 text-primary border border-primary/30' 
-                        : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
+                      : project.type === 'saas'
+                        ? 'bg-indigo-500/20 text-indigo-400 border border-indigo-500/30'
+                        : project.type === 'mobile'
+                          ? 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/30'
+                          : project.type === 'professional' 
+                            ? 'bg-primary/20 text-primary border border-primary/30' 
+                            : 'bg-emerald-500/20 text-emerald-400 border border-emerald-500/30'
                   }`}>
-                    {(project as any).isLandingPage ? 'landing page' : project.type}
+                    {(project as any).isLandingPage ? 'landing page' : project.type === 'saas' ? 'saas product' : project.type === 'mobile' ? 'mobile app' : project.type}
                   </span>
                 </div>
               </div>

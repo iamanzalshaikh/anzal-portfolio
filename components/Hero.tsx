@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const Hero = () => {
   return (
@@ -57,16 +58,20 @@ const Hero = () => {
           transition={{ duration: 0.5, delay: 0.4 }}
           className="mt-10 flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto"
         >
-          <button className="group relative px-8 py-4 bg-primary text-background-dark text-base font-bold rounded-lg shadow-[0_0_20px_rgba(0,217,255,0.3)] hover:shadow-[0_0_30px_rgba(0,217,255,0.5)] transition-all duration-300 overflow-hidden">
-            <div className="absolute inset-0 w-full h-full bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
-            <span className="relative flex items-center justify-center gap-2">
-              View My Work 
-              <span className="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-            </span>
-          </button>
-          <button className="group px-8 py-4 bg-transparent border border-slate-600 text-white text-base font-semibold rounded-lg hover:border-primary hover:text-primary transition-all duration-300">
-            Get In Touch
-          </button>
+          <Link href="/projects" className="w-full sm:w-auto">
+            <button className="w-full group relative px-8 py-4 bg-primary text-background-dark text-base font-bold rounded-lg shadow-[0_0_20px_rgba(0,217,255,0.3)] hover:shadow-[0_0_30px_rgba(0,217,255,0.5)] transition-all duration-300 overflow-hidden">
+              <div className="absolute inset-0 w-full h-full bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300" />
+              <span className="relative flex items-center justify-center gap-2">
+                View My Work 
+                <span className="material-icons text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+              </span>
+            </button>
+          </Link>
+          <Link href="/contact" className="w-full sm:w-auto">
+            <button className="w-full group px-8 py-4 bg-transparent border border-slate-600 text-white text-base font-semibold rounded-lg hover:border-primary hover:text-primary transition-all duration-300">
+              Get In Touch
+            </button>
+          </Link>
         </motion.div>
 
         {/* Social Links */}

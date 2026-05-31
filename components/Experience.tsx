@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 const experiences = [
   {
@@ -186,10 +187,12 @@ const Experience = () => {
         <p className="text-slate-400 mb-8 max-w-xl mx-auto">
           My journey is defined by solving complex problems. Let's build the next big thing together.
         </p>
-        <button className="inline-flex items-center justify-center px-8 py-3 text-sm font-bold text-background-dark bg-primary rounded-lg hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(0,217,255,0.4)] hover:shadow-[0_0_30px_rgba(0,217,255,0.6)]">
-          <span className="material-icons mr-2 text-lg">mail_outline</span>
-          Get in Touch
-        </button>
+        <Link href="/contact">
+          <button className="inline-flex items-center justify-center px-8 py-3 text-sm font-bold text-background-dark bg-primary rounded-lg hover:bg-cyan-400 transition-all shadow-[0_0_20px_rgba(0,217,255,0.4)] hover:shadow-[0_0_30px_rgba(0,217,255,0.6)]">
+            <span className="material-icons mr-2 text-lg">mail_outline</span>
+            Get in Touch
+          </button>
+        </Link>
       </section>
     </section>
   );
