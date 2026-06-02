@@ -20,7 +20,7 @@ interface MobileProject {
 
 const mobileProjects: MobileProject[] = [
   {
-    title: 'AQC - Grievance Mobile Application',
+    title: 'AGQ - Grievance Mobile Application',
     platform: 'Cross-Platform React Native',
     description: 'A production-ready complaint resolution and grievance monitoring ecosystem. Facilitates citizens, officers, and administrators with secure multi-role workflows and queue-driven automated updates.',
     tags: ['React Native', 'Node.js', 'Express', 'MongoDB', 'BullMQ', 'Redis'],
@@ -31,10 +31,12 @@ const mobileProjects: MobileProject[] = [
       'Advanced Spatial Search and Location Tagging'
     ],
     images: [
-      "/projects/aqc/aqc_1.png",
-      "/projects/aqc/aqc_2.png",
-      "/projects/aqc/aqc_3.png",
-      "/projects/aqc/aqc_4.png",
+      "/projects/agq/agq_1.png",
+      "/projects/agq/agq_2.png",
+      "/projects/agq/agq_3.png",
+      "/projects/agq/agq_4.png",
+      "/projects/agq/agq_5.png",
+      "/projects/agq/agq_6.png",
     ],
     accentColor: "from-cyan-500 to-blue-600"
   },
@@ -73,12 +75,37 @@ const mobileProjects: MobileProject[] = [
       'High-Speed Websocket Sessions for Real-Time Status tracking'
     ],
     images: [
-      "/projects/herridez/hr_final_1.png",
-      "/projects/herridez/hr_final_2.png",
-      "/projects/herridez/hr_final_3.png",
-      "/projects/herridez/hr_final_4.png",
+      "/projects/herridez/hr_1.jpeg",
+      "/projects/herridez/hr_2.jpeg",
+      "/projects/herridez/hr_3.jpeg",
+      "/projects/herridez/hr_4.jpeg",
+      "/projects/herridez/hr_5.jpeg",
+      "/projects/herridez/hr_6.jpeg",
+      "/projects/herridez/hr_7.jpeg",
+      "/projects/herridez/hr_8.jpeg",
+      "/projects/herridez/hr_9.jpeg",
     ],
     accentColor: "from-emerald-500 to-teal-600"
+  },
+  {
+    title: 'UTAP - Live Streaming Platform',
+    platform: 'Real-Time Streaming App',
+    description: 'A high-performance real-time mobile live streaming platform. Enables content creators to broadcast streams, build communities, manage saved libraries, and monetize their channels with professional account tiers.',
+    tags: ['React Native', 'WebRTC', 'Node.js', 'Socket.IO', 'Express', 'MongoDB'],
+    features: [
+      'Real-Time Live Video Broadcasts & High-Fidelity Streaming',
+      'Interactive Live Chat & Viewer Engagement Controls',
+      'Saved Content Libraries & Following Streams Feed',
+      'Professional Profile Dashboards with Monetization Features'
+    ],
+    images: [
+      "/projects/utap/utap_1.png",
+      "/projects/utap/utap_2.png",
+      "/projects/utap/utap_3.png",
+      "/projects/utap/utap_4.png",
+      "/projects/utap/utap_5.png",
+    ],
+    accentColor: "from-indigo-500 to-purple-600"
   }
 ];
 

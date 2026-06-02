@@ -49,16 +49,18 @@ const projectsData: ProjectItem[] = [
     features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
   },
   {
-    title: 'AQC - Grievance Mobile Application',
+    title: 'AGQ - Grievance Mobile Application',
     type: 'mobile',
     description: 'Full-stack grievance mobile application with real-time status sync, queue-driven workflows, and secure multi-role complaint lifecycles.',
     tags: ['Mobile App', 'Node.js', 'Express', 'MongoDB'],
     liveUrl: '#',
     images: [
-      "/projects/aqc/aqc_1.png",
-      "/projects/aqc/aqc_2.png",
-      "/projects/aqc/aqc_3.png",
-      "/projects/aqc/aqc_4.png",
+      "/projects/agq/agq_1.png",
+      "/projects/agq/agq_2.png",
+      "/projects/agq/agq_3.png",
+      "/projects/agq/agq_4.png",
+      "/projects/agq/agq_5.png",
+      "/projects/agq/agq_6.png",
     ],
     objectFit: 'contain',
     features: ['Citizen/Admin/Officer RBAC', 'Redis Caching Layer', 'BullMQ Async Pipelines', 'Socket.IO Live Updates']
@@ -89,12 +91,38 @@ const projectsData: ProjectItem[] = [
     tags: ['React Native', 'Node.js', 'Redis', 'BullMQ', 'Socket.io'],
     liveUrl: '#',
     images: [
-      "/projects/herridez/hr_final_1.png",
-      "/projects/herridez/hr_final_2.png",
-      "/projects/herridez/hr_final_3.png",
-      "/projects/herridez/hr_final_4.png",
+      "/projects/herridez/hr_1.jpeg",
+      "/projects/herridez/hr_2.jpeg",
+      "/projects/herridez/hr_3.jpeg",
+      "/projects/herridez/hr_4.jpeg",
+      "/projects/herridez/hr_5.jpeg",
+      "/projects/herridez/hr_6.jpeg",
+      "/projects/herridez/hr_7.jpeg",
+      "/projects/herridez/hr_8.jpeg",
+      "/projects/herridez/hr_9.jpeg",
     ],
     features: ['Real-time GPS Tracking', 'SOS Escalation System', 'Live Ride Sharing', 'Social Event Layer']
+  },
+  {
+    title: 'UTAP (React Native)',
+    type: 'mobile',
+    description: 'A premium, high-performance real-time mobile live streaming platform for content creators and viewer engagement.',
+    tags: ['React Native', 'WebRTC', 'Node.js', 'Socket.IO', 'MongoDB'],
+    liveUrl: '#',
+    images: [
+      "/projects/utap/utap_1.png",
+      "/projects/utap/utap_2.png",
+      "/projects/utap/utap_3.png",
+      "/projects/utap/utap_4.png",
+      "/projects/utap/utap_5.png",
+    ],
+    objectFit: 'contain',
+    features: [
+      'Real-time Live Video Streaming',
+      'Interactive Live chat',
+      'Saved Content & Follower Management',
+      'Monetization & Pro Profiles'
+    ]
   },
   {
     title: 'Vedic Success – Spiritual Tech',
