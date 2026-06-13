@@ -22,6 +22,24 @@ interface ProjectItem {
 const projectsData: ProjectItem[] = [
   // Professional Projects
   {
+    title: 'Restaurant QR SaaS',
+    type: 'professional',
+    description: 'A comprehensive SaaS platform for restaurants to create digital menus with QR codes, manage orders, and streamline operations.',
+    tags: ['Next.js', 'React', 'Tailwind CSS', 'SaaS'],
+    liveUrl: 'https://resturant-qr-saas.vercel.app/',
+    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800",
+    features: ['Digital QR Menus', 'Order Management', 'Real-time Updates', 'Admin Dashboard']
+  },
+  {
+    title: 'AI Interview Simulator',
+    type: 'professional',
+    description: 'An AI-powered interview preparation platform that provides real-time simulations and feedback to help users practice for their upcoming interviews.',
+    tags: ['React.js', 'AI Integration', 'Tailwind CSS'],
+    liveUrl: 'https://ai-interview-5gz6.vercel.app/',
+    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
+    features: ['AI Interview Simulation', 'Real-time Feedback', 'Interactive UI', 'Performance Tracking']
+  },
+  {
     title: 'WearUp – Premium Clothing Storefront',
     type: 'professional',
     description: 'A high-end editorial digital retail platform featuring real-time product queries, an interactive shopping cart, custom-tailored collection cataloging, and an immersive checkout flow.',
