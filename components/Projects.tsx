@@ -20,6 +20,15 @@ interface ProjectItem {
 }
 
 const projectsData: ProjectItem[] = [
+  {
+    title: 'Clawbot – AI Lead Management System',
+    type: 'saas',
+    description: 'An intelligent full-stack AI lead management platform featuring automated sales pipelines, role-based controls, and detailed performance dashboards.',
+    tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
+    liveUrl: 'https://clawbot-ai-lead.vercel.app/login',
+    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    features: ['Role-based Auth', 'Interactive Pipelines', 'Secure API Gateway', 'Performance Dashboards']
+  },
   // Professional Projects
   {
     title: 'Restaurant QR SaaS',
@@ -280,6 +289,7 @@ const projectsData: ProjectItem[] = [
     features: ['Dynamic MCQ Test Player', 'Real-time Result Analytics', 'Stateful Session Recovery', 'Admin Dashboard & RBAC']
   },
 
+
   // Personal Projects
   {
     title: 'LMT – AI Learning Management',
@@ -308,15 +318,7 @@ const projectsData: ProjectItem[] = [
     image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80&w=800",
     features: ['ML Predictions', 'Anomaly Detection', 'CSV Export', 'Live Charts']
   },
-  {
-    title: 'Clawbot – AI Lead Management System',
-    type: 'personal',
-    description: 'An intelligent full-stack AI lead management platform featuring automated sales pipelines, role-based controls, and detailed performance dashboards.',
-    tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
-    liveUrl: 'https://clawbot-ai-lead.vercel.app/login',
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    features: ['Role-based Auth', 'Interactive Pipelines', 'Secure API Gateway', 'Performance Dashboards']
-  },
+
   {
     title: 'AI Assistant Shifra',
     type: 'personal',
