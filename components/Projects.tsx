@@ -143,6 +143,38 @@ const projectsData: ProjectItem[] = [
     ]
   },
   {
+    title: 'QBite (Customer) - Food Delivery Ecosystem',
+    type: 'mobile',
+    description: 'A premium, user-centric food ordering and delivery marketplace app with custom menus, items customizations, coupons engine, and live order tracking.',
+    tags: ['React Native', 'Node.js', 'Socket.IO', 'Express', 'MongoDB'],
+    liveUrl: '#',
+    images: [
+      "/projects/qbite/qbite_customer_1.jpeg",
+      "/projects/qbite/qbite_customer_2.jpeg",
+      "/projects/qbite/qbite_customer_3.jpeg",
+      "/projects/qbite/qbite_customer_4.jpeg",
+      "/projects/qbite/qbite_customer_5.jpeg",
+      "/projects/qbite/qbite_customer_6.jpeg",
+      "/projects/qbite/qbite_customer_7.jpeg"
+    ],
+    objectFit: 'contain',
+    features: ['Interactive Menus', 'Customizable Items', 'Live Order Tracking', 'Integrated Coupons Engine']
+  },
+  {
+    title: 'QBite (Rider) - Logistics & Delivery Agent',
+    type: 'mobile',
+    description: 'A logistics and order delivery routing app for riders with active-status tracking, job queues, turn-by-turn map navigation, and live updates.',
+    tags: ['React Native', 'Node.js', 'Socket.IO', 'Google Maps', 'Geolocation'],
+    liveUrl: '#',
+    images: [
+      "/projects/qbite/qbite_rider_1.jpeg",
+      "/projects/qbite/qbite_rider_2.jpeg",
+      "/projects/qbite/qbite_rider_3.jpeg"
+    ],
+    objectFit: 'contain',
+    features: ['Earnings Dashboard', 'Instant Job Dispatch Queue', 'Turn-by-turn Map Tracking', 'Status Milestone Tracker']
+  },
+  {
     title: 'Vedic Success – Spiritual Tech',
     type: 'professional',
     description: 'Where Ancient Wisdom Meets Modern Neuroscience. Decoding life through 231 precise parameters using VSLR algorithm.',
@@ -277,13 +309,13 @@ const projectsData: ProjectItem[] = [
     features: ['ML Predictions', 'Anomaly Detection', 'CSV Export', 'Live Charts']
   },
   {
-    title: 'Lead Management System',
+    title: 'Clawbot – AI Lead Management System',
     type: 'personal',
-    description: 'Full-stack sales lead tracker with role-based access control and performance dashboards.',
-    tags: ['React.js', 'Express', 'MongoDB', 'JWT'],
-    liveUrl: 'https://leatmanagement.netlify.app/',
+    description: 'An intelligent full-stack AI lead management platform featuring automated sales pipelines, role-based controls, and detailed performance dashboards.',
+    tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
+    liveUrl: 'https://clawbot-ai-lead.vercel.app/login',
     image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
-    features: ['Role-based Auth', 'Dashboards', 'Secure APIs', 'CORS Enabled']
+    features: ['Role-based Auth', 'Interactive Pipelines', 'Secure API Gateway', 'Performance Dashboards']
   },
   {
     title: 'AI Assistant Shifra',

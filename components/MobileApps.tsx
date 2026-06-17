@@ -106,6 +106,46 @@ const mobileProjects: MobileProject[] = [
       "/projects/utap/utap_5.png",
     ],
     accentColor: "from-indigo-500 to-purple-600"
+  },
+  {
+    title: 'QBite (Customer) - Food Delivery Ecosystem',
+    platform: 'Cross-Platform React Native',
+    description: 'A premium, user-centric food ordering and delivery marketplace app. Features intuitive restaurant menus, real-time item customization, seamless coupon application, stateful checkout, and sub-second live order tracking.',
+    tags: ['React Native', 'Node.js', 'Express', 'MongoDB', 'Socket.IO', 'Leaflet Map'],
+    features: [
+      'Interactive Restaurant Menus & Category Filters',
+      'Advanced Item Customizations & Add-on Selection',
+      'Coupons Engine with instant discount calculation',
+      'Sub-second Live Order Tracking & Route Telemetry'
+    ],
+    images: [
+      "/projects/qbite/qbite_customer_1.jpeg",
+      "/projects/qbite/qbite_customer_2.jpeg",
+      "/projects/qbite/qbite_customer_3.jpeg",
+      "/projects/qbite/qbite_customer_4.jpeg",
+      "/projects/qbite/qbite_customer_5.jpeg",
+      "/projects/qbite/qbite_customer_6.jpeg",
+      "/projects/qbite/qbite_customer_7.jpeg"
+    ],
+    accentColor: "from-orange-500 to-amber-600"
+  },
+  {
+    title: 'QBite (Rider) - Logistics & Delivery Agent',
+    platform: 'Real-Time Delivery Client',
+    description: 'A logistics and order delivery routing application for delivery partners. Equipped with active-duty status toggles, persistent notifications, queue-based job notifications, and turn-by-turn map telemetry.',
+    tags: ['React Native', 'Node.js', 'Socket.IO', 'Express', 'Google Maps API', 'Background Geolocation'],
+    features: [
+      'Live Earnings & Completed Deliveries Dashboard',
+      'Instant Order Accept/Reject Queue Mechanism',
+      'Turn-by-Turn Map Navigation & Route Synchronization',
+      'Real-Time Background Geolocation Tracking & Status Milestones'
+    ],
+    images: [
+      "/projects/qbite/qbite_rider_1.jpeg",
+      "/projects/qbite/qbite_rider_2.jpeg",
+      "/projects/qbite/qbite_rider_3.jpeg"
+    ],
+    accentColor: "from-green-500 to-emerald-600"
   }
 ];
 
