@@ -288,6 +288,65 @@ const projectsData: ProjectItem[] = [
     image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
     features: ['Dynamic MCQ Test Player', 'Real-time Result Analytics', 'Stateful Session Recovery', 'Admin Dashboard & RBAC']
   },
+  {
+    title: 'AECCI – Asian Exporters Chamber Portal',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Premium trade portal for the Asian Exporters\' Chamber of Commerce and Industry covering membership, export services, and global commerce programs.',
+    tags: ['Trade Portal', 'Corporate Web', 'React.js', 'Export'],
+    liveUrl: 'https://www.aecci.org.in/',
+    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800",
+    features: ['Export Membership Hub', 'Trade Program Showcase', 'Chamber Corporate Portal', 'Global Commerce Presence']
+  },
+  {
+    title: 'Outfit Theory – Curated Menswear',
+    type: 'professional',
+    description: 'Editorial menswear storefront with curated outfits, capsule wardrobes, made-to-measure booking, and a virtual style experience.',
+    tags: ['E-Commerce', 'Fashion', 'React.js', 'Netlify'],
+    liveUrl: 'https://outfit-theory-frontend.netlify.app/',
+    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800",
+    features: ['Style Quiz & Virtual Tour', 'Capsule Wardrobe Shop', 'Made-to-Measure Booking', 'Editorial Lookbook UI']
+  },
+  {
+    title: 'Supreme Kitchen – Modular Kitchens',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Premium modular kitchen brand site with collections, materials, consultations, and conversion-focused booking for Indian homes.',
+    tags: ['Interior Design', 'Landing Page', 'Next.js', 'Lead Gen'],
+    liveUrl: 'https://modular-kitchen-nine.vercel.app/',
+    image: "https://images.unsplash.com/photo-1556911220-bff31c812dce?auto=format&fit=crop&q=80&w=800",
+    features: ['Collection Catalog', 'Consultation Booking', 'Materials Showcase', 'Local Lead Capture']
+  },
+  {
+    title: 'JKF India – Jayant Furnishers',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Hospitality, commercial, and industrial interiors showcase for JKF India with project galleries, legacy storytelling, and inquiry CTAs.',
+    tags: ['Interior Design', 'Corporate Web', 'React.js', 'Hospitality'],
+    liveUrl: 'https://jkf-final.onrender.com/',
+    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
+    features: ['Project Portfolio Gallery', 'Hospitality & Commercial Work', 'Legacy Brand Story', 'Inquiry / Lead Flow']
+  },
+  {
+    title: 'Raj TVS – Two-Wheeler Dealership',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Authorized TVS dealership website with motorcycle catalog, service highlights, and conversion-focused enquiry and booking flows.',
+    tags: ['Automotive', 'Dealership', 'React.js', 'Lead Gen'],
+    liveUrl: 'https://rajtvs.com/',
+    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=800",
+    features: ['Model Catalog', 'Service Experience', 'Enquiry & Booking CTAs', 'Showroom Brand Story']
+  },
+  {
+    title: 'Trishaan Motors – Royal Enfield Dealer',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Authorized Royal Enfield dealership site with motorcycle catalog, test-ride booking, service highlights, and showroom storytelling.',
+    tags: ['Automotive', 'Dealership', 'React.js', 'Lead Gen'],
+    liveUrl: 'https://royalenfield-wr5o.onrender.com/',
+    image: "https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&q=80&w=800",
+    features: ['Model Catalog', 'Test Ride Booking', 'Service Experience', 'Showroom Storytelling']
+  },
 
 
   // Personal Projects
