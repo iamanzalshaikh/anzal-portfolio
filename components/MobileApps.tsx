@@ -20,6 +20,53 @@ interface MobileProject {
 
 const mobileProjects: MobileProject[] = [
   {
+    title: 'Mirror Mind – AI Cognitive Companion',
+    platform: 'AI Self-Reflection Mobile App',
+    description: 'An AI-powered cognitive companion for self-reflection. Features persona advisors, behavioral pattern diagnostics, decision confidence maps, and a synced MirrorMind Double chat experience.',
+    tags: ['React Native', 'AI Companion', 'Behavioral Analytics', 'Mobile App'],
+    features: [
+      'Persona Simulation Suite (Future, Past, Stoic & more)',
+      'Deep Behavioral Pattern Diagnostics & Decision Maps',
+      'AI Cognitive Double Companion Chat',
+      'Confidence Alignment & Active Reflection Audits'
+    ],
+    images: [
+      "/projects/mirrormind/mm_3.png",
+      "/projects/mirrormind/mm_5.png",
+      "/projects/mirrormind/mm_1.png",
+      "/projects/mirrormind/mm_2.png",
+      "/projects/mirrormind/mm_4.png",
+    ],
+    accentColor: "from-violet-500 to-purple-700"
+  },
+  {
+    title: 'SD Services – Scoots Delivery',
+    platform: 'Campus Multi-Service Delivery App',
+    description: 'A full campus delivery marketplace for food, grocery, pharmacy, and store orders. Includes wallet payments, live cart, checkout, order timelines, and campus drop-off locations.',
+    tags: ['React Native', 'Delivery', 'E-Commerce', 'Wallet', 'Mobile App'],
+    features: [
+      'Multi-Category Delivery (Food, Grocery, Pharmacy, Store)',
+      'Wallet Balance, Coupons & Checkout Flow',
+      'End-to-End Order Tracking Timeline',
+      'Campus Drop-off Locations & Profile Management'
+    ],
+    images: [
+      "/projects/sdservice/sd_1.png",
+      "/projects/sdservice/sd_2.png",
+      "/projects/sdservice/sd_3.png",
+      "/projects/sdservice/sd_4.png",
+      "/projects/sdservice/sd_5.png",
+      "/projects/sdservice/sd_6.png",
+      "/projects/sdservice/sd_7.png",
+      "/projects/sdservice/sd_8.png",
+      "/projects/sdservice/sd_9.png",
+      "/projects/sdservice/sd_10.png",
+      "/projects/sdservice/sd_11.png",
+      "/projects/sdservice/sd_12.png",
+    ],
+    accentColor: "from-orange-500 to-red-600"
+  },
+  {
     title: 'AGQ - Grievance Mobile Application',
     platform: 'Cross-Platform React Native',
     description: 'A production-ready complaint resolution and grievance monitoring ecosystem. Facilitates citizens, officers, and administrators with secure multi-role workflows and queue-driven automated updates.',
@@ -215,7 +262,7 @@ const MobileApps = () => {
                 : "bg-surface-dark/50 text-slate-400 border-slate-800/80 hover:text-white hover:border-slate-700"
             }`}
           >
-            {proj.title.split(" - ")[0]}
+            {proj.title.split(/ [-–] /)[0]}
           </button>
         ))}
       </div>

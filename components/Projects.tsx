@@ -19,14 +19,33 @@ interface ProjectItem {
   features: string[];
 }
 
+const getProjectRank = (p: ProjectItem) => {
+  // Big product apps first, landing pages last
+  if (p.type === "saas") return 0;
+  if (p.type === "mobile") return 1;
+  if (p.type === "professional" && !p.isLandingPage) return 2;
+  if (p.type === "personal") return 3;
+  if (p.isLandingPage || p.type === "landing-page") return 4;
+  return 5;
+};
+
 const projectsData: ProjectItem[] = [
+  {
+    title: 'EGC India Shopping Club',
+    type: 'saas',
+    description: 'Smart shopping ecosystem with area-agent networks, membership plans, flash deals, leads, wallet payouts, and multi-area growth across Navi Mumbai.',
+    tags: ['E-Commerce', 'SaaS', 'Membership', 'Agent Network'],
+    liveUrl: 'https://shop.egcindia.in/',
+    image: "/projects/websites/egc-shop.jpg",
+    features: ['Area Agent Network', 'Membership & Flash Deals', 'Leads & Earnings Hub', 'Wallet & Payouts']
+  },
   {
     title: 'Clawbot – AI Lead Management System',
     type: 'saas',
     description: 'An intelligent full-stack AI lead management platform featuring automated sales pipelines, role-based controls, and detailed performance dashboards.',
     tags: ['React.js', 'Node.js', 'Express', 'MongoDB', 'JWT Auth'],
     liveUrl: 'https://clawbot-ai-lead.vercel.app/login',
-    image: "https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/clawbot.jpg",
     features: ['Role-based Auth', 'Interactive Pipelines', 'Secure API Gateway', 'Performance Dashboards']
   },
   // Professional Projects
@@ -36,7 +55,7 @@ const projectsData: ProjectItem[] = [
     description: 'A comprehensive SaaS platform for restaurants to create digital menus with QR codes, manage orders, and streamline operations.',
     tags: ['Next.js', 'React', 'Tailwind CSS', 'SaaS'],
     liveUrl: 'https://resturant-qr-saas.vercel.app/',
-    image: "https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/restaurant-qr.jpg",
     features: ['Digital QR Menus', 'Order Management', 'Real-time Updates', 'Admin Dashboard']
   },
   {
@@ -45,7 +64,7 @@ const projectsData: ProjectItem[] = [
     description: 'An AI-powered interview preparation platform that provides real-time simulations and feedback to help users practice for their upcoming interviews.',
     tags: ['React.js', 'AI Integration', 'Tailwind CSS'],
     liveUrl: 'https://ai-interview-5gz6.vercel.app/',
-    image: "https://images.unsplash.com/photo-1620712943543-bcc4688e7485?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/ai-interview.jpg",
     features: ['AI Interview Simulation', 'Real-time Feedback', 'Interactive UI', 'Performance Tracking']
   },
   {
@@ -54,7 +73,7 @@ const projectsData: ProjectItem[] = [
     description: 'A high-end editorial digital retail platform featuring real-time product queries, an interactive shopping cart, custom-tailored collection cataloging, and an immersive checkout flow.',
     tags: ['React.js', 'Node.js', 'Redux Toolkit', 'Tailwind CSS', 'MongoDB'],
     liveUrl: 'https://clothing-frontend-zqt8.onrender.com/',
-    image: 'https://images.unsplash.com/photo-1441986300917-64674bd600d8?auto=format&fit=crop&q=80&w=800',
+    image: "/projects/websites/wearup.jpg",
     features: ['Dynamic Cart & Checkout', 'Admin Product Management', 'JWT Secure Session Auth', 'High-Performance Image Optimization']
   },
   {
@@ -63,7 +82,7 @@ const projectsData: ProjectItem[] = [
     description: 'An enterprise-grade point-of-sale system for businesses. Streamlines invoicing, order-taking, live stock tracking, and sales operations with lightning-fast reactive dashboards.',
     tags: ['React.js', 'TypeScript', 'Recharts', 'Express', 'Tailwind CSS'],
     liveUrl: 'https://pos-frontend-rudu.onrender.com/',
-    image: 'https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?auto=format&fit=crop&q=80&w=800',
+    image: "/projects/websites/apexpos.jpg",
     features: ['Lightning-fast Billing Grid', 'Real-time Stock Tracking', 'Rich Revenue Analytics', 'Multi-Terminal Syncing']
   },
   {
@@ -74,6 +93,45 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://schoolfms.com/',
     image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
     features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
+  },
+  {
+    title: 'Mirror Mind – AI Cognitive Companion',
+    type: 'mobile',
+    description: 'AI-powered self-reflection app with persona advisors, behavioral pattern diagnostics, decision maps, and a synced cognitive double companion.',
+    tags: ['React Native', 'AI Companion', 'Behavioral Analytics', 'Mobile App'],
+    liveUrl: '#',
+    images: [
+      "/projects/mirrormind/mm_3.png",
+      "/projects/mirrormind/mm_5.png",
+      "/projects/mirrormind/mm_1.png",
+      "/projects/mirrormind/mm_2.png",
+      "/projects/mirrormind/mm_4.png",
+    ],
+    objectFit: 'contain',
+    features: ['Persona Simulation Suite', 'Behavioral Pattern Diagnostics', 'AI Cognitive Double Chat', 'Decision Confidence Mapping']
+  },
+  {
+    title: 'SD Services – Scoots Delivery',
+    type: 'mobile',
+    description: 'Campus multi-service delivery app for food, grocery, pharmacy, and store orders with wallet payments, live cart, and end-to-end order tracking.',
+    tags: ['React Native', 'Delivery', 'E-Commerce', 'Mobile App'],
+    liveUrl: '#',
+    images: [
+      "/projects/sdservice/sd_1.png",
+      "/projects/sdservice/sd_2.png",
+      "/projects/sdservice/sd_3.png",
+      "/projects/sdservice/sd_4.png",
+      "/projects/sdservice/sd_5.png",
+      "/projects/sdservice/sd_6.png",
+      "/projects/sdservice/sd_7.png",
+      "/projects/sdservice/sd_8.png",
+      "/projects/sdservice/sd_9.png",
+      "/projects/sdservice/sd_10.png",
+      "/projects/sdservice/sd_11.png",
+      "/projects/sdservice/sd_12.png",
+    ],
+    objectFit: 'contain',
+    features: ['Multi-Category Delivery', 'Wallet + Checkout Flow', 'Order Tracking Timeline', 'Campus Drop-off Locations']
   },
   {
     title: 'AGQ - Grievance Mobile Application',
@@ -189,7 +247,7 @@ const projectsData: ProjectItem[] = [
     description: 'Where Ancient Wisdom Meets Modern Neuroscience. Decoding life through 231 precise parameters using VSLR algorithm.',
     tags: ['Neuroscience', 'Algorithm', 'Data-Driven', 'Consulting'],
     liveUrl: 'https://www.vedicsuccess.com/',
-    image: "https://images.unsplash.com/photo-1507413245164-6160d8298b31?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/vedic-success.jpg",
     features: ['231-Point VSLR AI', 'RAS Optimization', '7-Dimension Success', 'Unified Theory of Life']
   },
   {
@@ -198,7 +256,7 @@ const projectsData: ProjectItem[] = [
     description: 'Specializing in end-to-end social media and content solutions, strategy, video production, and original show development.',
     tags: ['Media Production', 'Content Strategy', 'Social Media', 'UGC'],
     liveUrl: 'https://www.e8productions.com/',
-    image: "https://images.unsplash.com/photo-1492724441997-5dc865305da7?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/e8-productions.jpg",
     features: ['Strategic Content', 'Video Production', 'Original Show Production', 'Social Media Mgmt']
   },
   {
@@ -207,7 +265,7 @@ const projectsData: ProjectItem[] = [
     description: 'AI-powered export/import gateway providing a one-window solution for global trade compliance and documentation.',
     tags: ['AI Trade', 'Compliance', 'Logistics', 'FinTech'],
     liveUrl: 'https://econs.egcindia.in/',
-    image: "https://images.unsplash.com/photo-1494412519320-aa613dfb7738?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/econs.jpg",
     features: ['Trade Compliance', 'Logistics Automation', 'HS Validation', 'Secure Documentation']
   },
   {
@@ -216,7 +274,7 @@ const projectsData: ProjectItem[] = [
     description: 'Experience luxury at every mile with Mumbai\'s elite car rental service featuring a premium fleet and transparent pricing.',
     tags: ['Mobility', 'Luxury Rental', '24/7 Support', 'Mumbai'],
     liveUrl: 'https://goshahrental.netlify.app/',
-    image: "https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/goshah.jpg",
     features: ['Premium Fleet', 'Transparent Pricing', 'Doorstep Delivery', '24/7 Assistance']
   },
   {
@@ -226,7 +284,7 @@ const projectsData: ProjectItem[] = [
     description: 'A high-end editorial premium fashion e-commerce storefront showcasing quiet luxury, curated collections, and an interactive lookbook experience.',
     tags: ['E-Commerce', 'Next.js', 'Framer Motion', 'Tailwind CSS'],
     liveUrl: 'https://69ff8d6bc3bdc61c33c7dfff--calm-kitsune-2dc38e.netlify.app/',
-    image: "https://images.unsplash.com/photo-1490481651871-ab68de25d43d?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/elysian.jpg",
     features: ['SS26 Atelier lookbook', 'Ethical & Small-Batch Focus', 'Editorial UI Animations', 'Interactive Style Feed']
   },
   {
@@ -236,7 +294,7 @@ const projectsData: ProjectItem[] = [
     description: 'A premium, high-conviction real estate showcase page designed for Thane’s iconic 25-acre destination residential project.',
     tags: ['Real Estate', 'Landing Page', 'Interactive Map', 'Premium UI'],
     liveUrl: 'https://69d79d5d77b5e3567bda1fce--euphonious-lokum-8ffe2b.netlify.app/',
-    image: "https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/hiranandani.jpg",
     features: ['3 Thematic Amenity Zones', 'IGBC Gold Rated Outline', 'Executive Portfolio Snapshot', 'Clubhouse & Podium Tour']
   },
   {
@@ -246,7 +304,7 @@ const projectsData: ProjectItem[] = [
     description: 'A modern, responsive educational portal for Chintamanrao Institute of Management Development and Research showcasing courses, placements, and campus admissions.',
     tags: ['EdTech', 'Higher Education', 'Responsive Portal', 'React.js'],
     liveUrl: 'https://glittery-kulfi-0fb52f.netlify.app/',
-    image: "https://images.unsplash.com/photo-1541339907198-e08756dedf3f?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/cimdr.jpg",
     features: ['AICTE/NAAC Program Guide', 'Verified Recruiter Portfolio', 'Mock Test & CET Registration', '125-Acre Legacy Overview']
   },
   {
@@ -256,7 +314,7 @@ const projectsData: ProjectItem[] = [
     description: 'A seamless, premium vehicle rental landing page offering curated luxury SUVs and high-performance cars with a doorstep delivery setup.',
     tags: ['Car Rental', 'Luxury Mobility', 'Landing Page', 'Framer Motion'],
     liveUrl: 'https://dancing-cajeta-881cb6.netlify.app/',
-    image: "https://images.unsplash.com/photo-1617814076367-b759c7d7e738?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/carbazar.jpg",
     features: ['60-Second Fast Booking', 'Verified Luxury SUV Fleet', 'Flexible Delivery Schedules', 'Comprehensive Cover Details']
   },
   {
@@ -266,7 +324,7 @@ const projectsData: ProjectItem[] = [
     description: 'A premium, modern corporate portal for a digital agency specializing in custom SaaS development, e-commerce, and advanced AI-driven workflow automations.',
     tags: ['IT Services', 'SaaS', 'Corporate Web', 'AI Automation'],
     liveUrl: 'https://webyaparsolutions.com/',
-    image: "https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/webyapar.jpg",
     features: ['Bespoke Software Design', 'AI-Powered System Solutions', 'Integrated Tech Marketing', 'Client Operations Growth']
   },
   {
@@ -276,7 +334,7 @@ const projectsData: ProjectItem[] = [
     description: 'A premium corporate showcase landing page for an international website and software development agency in the UAE, designed to capture leads, showcase technical integrations, and drive brand credibility.',
     tags: ['Agency Portal', 'React.js', 'Headless CMS', 'Modern UI'],
     liveUrl: 'https://willowy-heliotrope-8af7b2.netlify.app/',
-    image: "https://images.unsplash.com/photo-1582407947304-fd86f028f716?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/webcastle.jpg",
     features: ['Interactive Quote Estimator', 'Tech Stack Integration Matrix', 'Agile Process Flow Map', 'Premium UAE Corporate Style']
   },
   {
@@ -285,7 +343,7 @@ const projectsData: ProjectItem[] = [
     description: 'A production-grade, highly interactive online assessment and test preparation platform featuring full-screen MCQ test players, real-time grading, detailed feedback loops, and robust user dashboards.',
     tags: ['React.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
     liveUrl: 'https://letscrack-frontend.onrender.com/',
-    image: "https://images.unsplash.com/photo-1434030216411-0b793f4b4173?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/letscrack.jpg",
     features: ['Dynamic MCQ Test Player', 'Real-time Result Analytics', 'Stateful Session Recovery', 'Admin Dashboard & RBAC']
   },
   {
@@ -295,7 +353,7 @@ const projectsData: ProjectItem[] = [
     description: 'Premium trade portal for the Asian Exporters\' Chamber of Commerce and Industry covering membership, export services, and global commerce programs.',
     tags: ['Trade Portal', 'Corporate Web', 'React.js', 'Export'],
     liveUrl: 'https://www.aecci.org.in/',
-    image: "https://images.unsplash.com/photo-1521791136064-7986c2920216?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/aecci.jpg",
     features: ['Export Membership Hub', 'Trade Program Showcase', 'Chamber Corporate Portal', 'Global Commerce Presence']
   },
   {
@@ -304,8 +362,17 @@ const projectsData: ProjectItem[] = [
     description: 'Editorial menswear storefront with curated outfits, capsule wardrobes, made-to-measure booking, and a virtual style experience.',
     tags: ['E-Commerce', 'Fashion', 'React.js', 'Netlify'],
     liveUrl: 'https://outfit-theory-frontend.netlify.app/',
-    image: "https://images.unsplash.com/photo-1483985988355-763728e1935b?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/outfit-theory.jpg",
     features: ['Style Quiz & Virtual Tour', 'Capsule Wardrobe Shop', 'Made-to-Measure Booking', 'Editorial Lookbook UI']
+  },
+  {
+    title: 'Nisha Dryfruits & Spices',
+    type: 'professional',
+    description: 'Premium dry fruits and exotic spices e-commerce storefront with product catalog, brand storytelling, and conversion-focused shopping experience.',
+    tags: ['E-Commerce', 'React.js', 'Vercel', 'Retail'],
+    liveUrl: 'https://nisha-frontend.vercel.app/',
+    image: "/projects/websites/nisha.jpg",
+    features: ['Product Catalog', 'Premium Brand Story', 'Responsive Storefront', 'Checkout-Ready UX']
   },
   {
     title: 'Supreme Kitchen – Modular Kitchens',
@@ -314,7 +381,7 @@ const projectsData: ProjectItem[] = [
     description: 'Premium modular kitchen brand site with collections, materials, consultations, and conversion-focused booking for Indian homes.',
     tags: ['Interior Design', 'Landing Page', 'Next.js', 'Lead Gen'],
     liveUrl: 'https://modular-kitchen-nine.vercel.app/',
-    image: "https://images.unsplash.com/photo-1556911220-bff31c812dce?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/supreme-kitchen.jpg",
     features: ['Collection Catalog', 'Consultation Booking', 'Materials Showcase', 'Local Lead Capture']
   },
   {
@@ -324,7 +391,7 @@ const projectsData: ProjectItem[] = [
     description: 'Hospitality, commercial, and industrial interiors showcase for JKF India with project galleries, legacy storytelling, and inquiry CTAs.',
     tags: ['Interior Design', 'Corporate Web', 'React.js', 'Hospitality'],
     liveUrl: 'https://jkf-final.onrender.com/',
-    image: "https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/jkf.jpg",
     features: ['Project Portfolio Gallery', 'Hospitality & Commercial Work', 'Legacy Brand Story', 'Inquiry / Lead Flow']
   },
   {
@@ -334,7 +401,7 @@ const projectsData: ProjectItem[] = [
     description: 'Authorized TVS dealership website with motorcycle catalog, service highlights, and conversion-focused enquiry and booking flows.',
     tags: ['Automotive', 'Dealership', 'React.js', 'Lead Gen'],
     liveUrl: 'https://rajtvs.com/',
-    image: "https://images.unsplash.com/photo-1558981806-ec527fa84c39?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/rajtvs.jpg",
     features: ['Model Catalog', 'Service Experience', 'Enquiry & Booking CTAs', 'Showroom Brand Story']
   },
   {
@@ -344,7 +411,7 @@ const projectsData: ProjectItem[] = [
     description: 'Authorized Royal Enfield dealership site with motorcycle catalog, test-ride booking, service highlights, and showroom storytelling.',
     tags: ['Automotive', 'Dealership', 'React.js', 'Lead Gen'],
     liveUrl: 'https://royalenfield-wr5o.onrender.com/',
-    image: "https://images.unsplash.com/photo-1558981359-219d6364c9c8?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/trishaan.jpg",
     features: ['Model Catalog', 'Test Ride Booking', 'Service Experience', 'Showroom Storytelling']
   },
 
@@ -356,7 +423,7 @@ const projectsData: ProjectItem[] = [
     description: 'An AI-powered LMS for students and educators featuring dual authentication, Razorpay, and AI-driven dashboards.',
     tags: ['React.js', 'Node.js', 'MongoDB', 'Razorpay'],
     liveUrl: 'https://lmt-frontend1.netlify.app/',
-    image: "https://images.unsplash.com/photo-1501504905252-473c47e087f8?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/lmt.jpg",
     features: ['Dual Auth', 'Razorpay', 'AI Dashboards', 'Role Management']
   },
   {
@@ -365,7 +432,7 @@ const projectsData: ProjectItem[] = [
     description: 'Secure token-based credit system with OpenAI API integration and real-time WebSocket feedback.',
     tags: ['React.js', 'Node.js', 'OpenAI', 'Socket.IO'],
     liveUrl: 'https://ailmm-frontend.onrender.com/',
-    image: "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/llm-chat.jpg",
     features: ['Credit System', 'OpenAI API', 'WebSocket', 'Chat History']
   },
   {
@@ -374,7 +441,7 @@ const projectsData: ProjectItem[] = [
     description: 'Real-time wind turbine vibration data visualization and forecasting using integrated ML models.',
     tags: ['React.js', 'ML', 'Recharts', 'Express'],
     liveUrl: 'https://vibration-q6co.onrender.com/',
-    image: "https://images.unsplash.com/photo-1489515217757-5fd1be406fef?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/digital-twin.jpg",
     features: ['ML Predictions', 'Anomaly Detection', 'CSV Export', 'Live Charts']
   },
 
@@ -384,7 +451,7 @@ const projectsData: ProjectItem[] = [
     description: 'Intelligent AI assistant with advanced conversational capabilities and smart response logic.',
     tags: ['AI Integration', 'React.js', 'Node.js', 'NLP'],
     liveUrl: 'https://upload-qvpb.onrender.com/',
-    image: "https://images.unsplash.com/photo-1484417894907-623942c8ee29?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/shifra.jpg",
     features: ['Smart NLP', 'Real-time UI', 'User Context', 'Fast Scaling']
   },
   {
@@ -402,7 +469,7 @@ const projectsData: ProjectItem[] = [
     description: 'E-commerce platform with role-based admin panel and AI product recommendations.',
     tags: ['React.js', 'Node.js', 'MongoDB', 'Cloudinary'],
     liveUrl: 'https://ai-frontend-9i66.onrender.com',
-    image: "https://images.unsplash.com/photo-1472851294608-062f824d29cc?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/ai-ecommerce.jpg",
     features: ['Admin Panel', 'AI Sorter', 'Image Handling', 'Secure Payments']
   },
   {
@@ -411,7 +478,7 @@ const projectsData: ProjectItem[] = [
     description: 'Full-stack property booking system with JWT auth and real-time updates.',
     tags: ['MERN Stack', 'JWT Auth', 'Bookings'],
     liveUrl: 'https://airbnb-frontend-ucog.onrender.com',
-    image: "https://images.unsplash.com/photo-1501785888041-af3ef285b470?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/airbnb.jpg",
     features: ['Search Flow', 'JWT Sessions', 'Host Control', 'Fast Loading']
   },
   {
@@ -420,7 +487,7 @@ const projectsData: ProjectItem[] = [
     description: 'Robust task tracking system with distinct admin/employee roles and local persistence.',
     tags: ['React.js', 'localStorage', 'Role Logic'],
     liveUrl: 'https://employemanagamentsystem1.onrender.com',
-    image: "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&q=80&w=800",
+    image: "/projects/websites/employee.jpg",
     features: ['Admin Control', 'Task Tracking', 'Local Save', 'Protected Routes']
   }
 ];
@@ -558,11 +625,17 @@ const Projects = () => {
   const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
   const [modalIndex, setModalIndex] = useState(0);
 
-  const filteredProjects = projectsData.filter(p => {
-    if (filter === "all") return true;
-    if (filter === "landing-page") return (p as any).isLandingPage || p.type === "landing-page";
-    return p.type === filter;
-  });
+  const filteredProjects = (() => {
+    // All Cases = every project (big apps first, landing pages last)
+    const list =
+      filter === "all"
+        ? [...projectsData]
+        : filter === "landing-page"
+          ? projectsData.filter((p) => p.isLandingPage || p.type === "landing-page")
+          : projectsData.filter((p) => p.type === filter);
+
+    return list.sort((a, b) => getProjectRank(a) - getProjectRank(b));
+  })();
 
   const openModal = (images: string[], index: number = 0) => {
     setSelectedImages(images);
