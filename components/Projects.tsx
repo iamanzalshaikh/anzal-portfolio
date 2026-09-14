@@ -48,6 +48,24 @@ const projectsData: ProjectItem[] = [
     image: "/projects/websites/clawbot.jpg",
     features: ['Role-based Auth', 'Interactive Pipelines', 'Secure API Gateway', 'Performance Dashboards']
   },
+  {
+    title: 'SchoolFMS – School Finance Management',
+    type: 'saas',
+    description: 'Full-stack school finance management platform for fees, salaries, operations, and admin workflows with secure role-based access and real-time dashboards.',
+    tags: ['React.js', 'Node.js', 'Prisma', 'PostgreSQL', 'SaaS'],
+    liveUrl: 'https://school-management-frontend-edenza.vercel.app/',
+    image: "/projects/websites/schoolfms.jpg",
+    features: ['Fee & Salary Management', 'Multi-Role Admin Access', 'Finance Dashboards', 'Secure School Operations']
+  },
+  {
+    title: 'ROOTS OS – Atelier Workspace',
+    type: 'saas',
+    description: 'Secure workspace login portal for Roots Atelier operations — managing atelier workflows, team access, and day-to-day studio operations.',
+    tags: ['SaaS', 'Workspace', 'Auth Portal', 'Operations'],
+    liveUrl: 'https://workspace.rootsatelier.in/login',
+    image: "/projects/websites/roots-os.jpg",
+    features: ['Secure Workspace Login', 'Atelier Operations Hub', 'Team Access Control', 'Studio Workflow Portal']
+  },
   // Professional Projects
   {
     title: 'Restaurant QR SaaS',
@@ -84,15 +102,6 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://pos-frontend-rudu.onrender.com/',
     image: "/projects/websites/apexpos.jpg",
     features: ['Lightning-fast Billing Grid', 'Real-time Stock Tracking', 'Rich Revenue Analytics', 'Multi-Terminal Syncing']
-  },
-  {
-    title: 'SchoolFMS - Multi-Tenant SaaS',
-    type: 'saas',
-    description: 'Scalable school management SaaS with tenant-isolated architecture, RBAC, secure APIs, and complete finance + operations visibility.',
-    tags: ['Node.js', 'Express', 'Prisma', 'PostgreSQL'],
-    liveUrl: 'https://schoolfms.com/',
-    image: "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=800",
-    features: ['Multi-Tenant RBAC', 'Fee + Salary Workflows', 'Redis/BullMQ Queues', 'JWT + Socket.IO Security']
   },
   {
     title: 'Mirror Mind – AI Cognitive Companion',
@@ -338,13 +347,52 @@ const projectsData: ProjectItem[] = [
     features: ['Interactive Quote Estimator', 'Tech Stack Integration Matrix', 'Agile Process Flow Map', 'Premium UAE Corporate Style']
   },
   {
-    title: 'LetsCrack – Premium MCQ & Test Preparation Platform',
+    title: 'LetsCrack English – Test Preparation Platform',
     type: 'professional',
-    description: 'A production-grade, highly interactive online assessment and test preparation platform featuring full-screen MCQ test players, real-time grading, detailed feedback loops, and robust user dashboards.',
-    tags: ['React.js', 'Node.js', 'TypeScript', 'Tailwind CSS', 'MongoDB'],
-    liveUrl: 'https://letscrack-frontend.onrender.com/',
+    description: 'Interactive English test preparation platform with MCQ players, real-time grading, detailed feedback, and learner dashboards for exam readiness.',
+    tags: ['EdTech', 'React.js', 'Assessment', 'English Learning'],
+    liveUrl: 'https://letscrackenglish.com/',
     image: "/projects/websites/letscrack.jpg",
-    features: ['Dynamic MCQ Test Player', 'Real-time Result Analytics', 'Stateful Session Recovery', 'Admin Dashboard & RBAC']
+    features: ['MCQ Test Player', 'Result Analytics', 'Learner Dashboards', 'Exam Practice Flows']
+  },
+  {
+    title: 'Outfit Theory – Curated Menswear',
+    type: 'professional',
+    description: 'Editorial menswear storefront with curated outfits, capsule wardrobes, made-to-measure booking, and a virtual style experience.',
+    tags: ['E-Commerce', 'Fashion', 'React.js', 'Vercel'],
+    liveUrl: 'https://outfit-theory-web.vercel.app/',
+    image: "/projects/websites/outfit-theory.jpg",
+    features: ['Style Quiz & Virtual Tour', 'Capsule Wardrobe Shop', 'Made-to-Measure Booking', 'Editorial Lookbook UI']
+  },
+  {
+    title: 'ROOTS by Sujata Agrawal – Timeless Couture',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Luxury couture brand site for custom-tailored collections, heritage storytelling, and premium client consultation journeys.',
+    tags: ['Fashion', 'Couture', 'Landing Page', 'Luxury Brand'],
+    liveUrl: 'https://roots.mediaamasala.com/',
+    image: "/projects/websites/roots-atelier.jpg",
+    features: ['Couture Brand Story', 'Custom Tailoring Focus', 'Premium Visual Identity', 'Consultation CTAs']
+  },
+  {
+    title: 'Eurevaa Diagnostics',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Diagnostics brand website for healthcare services, lab offerings, and patient-facing booking and information flows.',
+    tags: ['Healthcare', 'Diagnostics', 'Corporate Web', 'Lead Gen'],
+    liveUrl: 'https://eurevaa.com/',
+    image: "/projects/websites/eurevaa.jpg",
+    features: ['Diagnostics Service Showcase', 'Patient-Focused UX', 'Brand Trust Design', 'Enquiry / Booking CTAs']
+  },
+  {
+    title: 'Aashi Jewels – Premium Diamond Jewellery',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Premium diamond jewellery storefront featuring lightweight certified collections, temple sets, rings, and Mumbai studio consultation booking.',
+    tags: ['E-Commerce', 'Jewellery', 'Luxury Retail', 'Landing Page'],
+    liveUrl: 'https://stellular-seahorse-c3bb81.netlify.app/',
+    image: "/projects/websites/aashi-jewels.jpg",
+    features: ['Diamond Collection Catalog', 'Occasion-Based Shopping', 'Studio Consultation Booking', 'Certified Jewellery Story']
   },
   {
     title: 'AECCI – Asian Exporters Chamber Portal',
@@ -355,15 +403,6 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://www.aecci.org.in/',
     image: "/projects/websites/aecci.jpg",
     features: ['Export Membership Hub', 'Trade Program Showcase', 'Chamber Corporate Portal', 'Global Commerce Presence']
-  },
-  {
-    title: 'Outfit Theory – Curated Menswear',
-    type: 'professional',
-    description: 'Editorial menswear storefront with curated outfits, capsule wardrobes, made-to-measure booking, and a virtual style experience.',
-    tags: ['E-Commerce', 'Fashion', 'React.js', 'Netlify'],
-    liveUrl: 'https://outfit-theory-frontend.netlify.app/',
-    image: "/projects/websites/outfit-theory.jpg",
-    features: ['Style Quiz & Virtual Tour', 'Capsule Wardrobe Shop', 'Made-to-Measure Booking', 'Editorial Lookbook UI']
   },
   {
     title: 'Nisha Dryfruits & Spices',
