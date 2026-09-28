@@ -68,6 +68,42 @@ const projectsData: ProjectItem[] = [
   },
   // Professional Projects
   {
+    title: 'MMVerse Clinic – Clinic Management System',
+    type: 'professional',
+    description: 'Clinic management platform for appointments, patient records, staff workflows, and day-to-day clinic operations with a calm, precise interface.',
+    tags: ['React.js', 'Clinic Management', 'Healthcare', 'Vercel'],
+    liveUrl: 'https://clinic-frontend-pearl.vercel.app/',
+    image: "/projects/websites/mmverse-clinic.jpg",
+    features: ['Appointment Scheduling', 'Patient Records', 'Staff & Role Workflows', 'Clinic Operations Dashboard']
+  },
+  {
+    title: 'MMVerse – Business Websites in Minutes',
+    type: 'professional',
+    description: 'Website platform for India\'s small businesses: catalogue, offers, verified credentials, and WhatsApp enquiries, with a dashboard that tracks views and clicks.',
+    tags: ['SaaS', 'Website Builder', 'WhatsApp', 'Dashboard'],
+    liveUrl: 'https://mmverse-pearl.vercel.app/',
+    image: "/projects/websites/mmverse.jpg",
+    features: ['6 Layouts & 6 Palettes', 'WhatsApp Enquiry Buttons', 'Verified Trust Badges', 'Views & Clicks Analytics']
+  },
+  {
+    title: 'Venus Aesthetic & Laser',
+    type: 'professional',
+    description: 'Professional skincare and aesthetic machines brand site with product catalogue, machine comparison, clinic setups across India, and consultation booking.',
+    tags: ['Healthcare', 'Product Catalogue', 'React.js', 'Lead Gen'],
+    liveUrl: 'https://mmverse-laser.vercel.app/',
+    image: "/projects/websites/venus-laser.jpg",
+    features: ['Skincare & Machine Catalogue', 'Machine Comparison', 'Clinic Setups Showcase', 'Consultation Booking']
+  },
+  {
+    title: 'Dronera Aviation – DGCA Drone Pilot Academy',
+    type: 'professional',
+    description: 'DGCA drone pilot training academy site with course programs, an interactive 3D drone viewer, training stages, blogs, and enquiry flows.',
+    tags: ['EdTech', 'Aviation', '3D / Interactive', 'Lead Gen'],
+    liveUrl: 'https://www.droneraaviation.com/',
+    image: "/projects/websites/dronera.jpg",
+    features: ['DGCA Course Programs', 'Interactive 3D Drone Viewer', 'Training Stage Timeline', 'Blogs & Enquiry Flow']
+  },
+  {
     title: 'Restaurant QR SaaS',
     type: 'professional',
     description: 'A comprehensive SaaS platform for restaurants to create digital menus with QR codes, manage orders, and streamline operations.',

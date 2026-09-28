@@ -6,13 +6,10 @@ const outDir = path.join(__dirname, "..", "public", "projects", "websites");
 fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
-  ["outfit-theory", "https://outfit-theory-web.vercel.app/"],
-  ["letscrack", "https://letscrackenglish.com/"],
-  ["schoolfms", "https://school-management-frontend-edenza.vercel.app/"],
-  ["roots-os", "https://workspace.rootsatelier.in/login"],
-  ["roots-atelier", "https://roots.mediaamasala.com/"],
-  ["eurevaa", "https://eurevaa.com/"],
-  ["aashi-jewels", "https://stellular-seahorse-c3bb81.netlify.app/"],
+  ["mmverse-clinic", "https://clinic-frontend-pearl.vercel.app/"],
+  ["mmverse", "https://mmverse-pearl.vercel.app/"],
+  ["venus-laser", "https://mmverse-laser.vercel.app/"],
+  ["dronera", "https://www.droneraaviation.com/"],
 ];
 
 (async () => {
@@ -28,7 +25,7 @@ const sites = [
     try {
       console.log(`CAPTURING ${slug} ...`);
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
-      await page.waitForTimeout(3500);
+      await page.waitForTimeout(5000);
       await page.screenshot({ path: file, type: "jpeg", quality: 78, fullPage: false });
       console.log(`OK ${slug} (${Math.round(fs.statSync(file).size / 1024)}kb)`);
     } catch (err) {
