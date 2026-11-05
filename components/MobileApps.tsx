@@ -20,6 +20,51 @@ interface MobileProject {
 
 const mobileProjects: MobileProject[] = [
   {
+    title: 'Zunivo – Spontaneous Plans Social',
+    platform: 'Friends & Hangouts Mobile App',
+    description: 'See who’s free, go live with coffee/gaming/walk plans, invite friends, and chat in hangout inboxes — backed by a staff console for people, reports, and audit.',
+    tags: ['Social', 'React Native', 'Hangouts', 'Staff Console'],
+    features: [
+      'Who’s Free home & Go Live status',
+      'Friends, invite links & username add',
+      'Hangout inbox chats & profile safety',
+      'Staff desk: people, reports, audit'
+    ],
+    images: [
+      "/projects/zunivo/zunivo_1.png",
+      "/projects/zunivo/zunivo_2.png",
+      "/projects/zunivo/zunivo_3.png",
+      "/projects/zunivo/zunivo_4.png",
+      "/projects/zunivo/zunivo_5.png",
+      "/projects/zunivo/zunivo_6.png",
+      "/projects/zunivo/zunivo_7.png",
+      "/projects/zunivo/zunivo_8.png",
+    ],
+    accentColor: "from-violet-500 to-purple-600"
+  },
+  {
+    title: 'Orbit Duo – Sync Dodge Game',
+    platform: 'Neon Dual-Orb Mobile Game',
+    description: 'Stay-connected sync dodge game with solo and split-touch duo modes, worlds map, skin locker, ranks, cloud save, and tethered P1/P2 gameplay.',
+    tags: ['Mobile Game', 'React Native', 'Duo Multiplayer', 'Cloud Save'],
+    features: [
+      'Solo Sync & Duo Touch 2P Modes',
+      'Worlds Map with Level Stars & Speed Curves',
+      'Skin Locker, Ranks & Cloud Save Profile',
+      'Tether Sync Gameplay with Lane Dodges'
+    ],
+    images: [
+      "/projects/orbit/orbit_1.jpg",
+      "/projects/orbit/orbit_2.jpg",
+      "/projects/orbit/orbit_4.jpg",
+      "/projects/orbit/orbit_5.jpg",
+      "/projects/orbit/orbit_6.jpg",
+      "/projects/orbit/orbit_7.jpg",
+      "/projects/orbit/orbit_8.jpg",
+    ],
+    accentColor: "from-cyan-400 to-fuchsia-500"
+  },
+  {
     title: 'Mirror Mind – AI Cognitive Companion',
     platform: 'AI Self-Reflection Mobile App',
     description: 'An AI-powered cognitive companion for self-reflection. Features persona advisors, behavioral pattern diagnostics, decision confidence maps, and a synced MirrorMind Double chat experience.',

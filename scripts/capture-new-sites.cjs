@@ -6,10 +6,7 @@ const outDir = path.join(__dirname, "..", "public", "projects", "websites");
 fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
-  ["mmverse-clinic", "https://clinic-frontend-pearl.vercel.app/"],
-  ["mmverse", "https://mmverse-pearl.vercel.app/"],
-  ["venus-laser", "https://mmverse-laser.vercel.app/"],
-  ["dronera", "https://www.droneraaviation.com/"],
+  ["westmere", "https://datascrapper-web-cp9thj-5a5ac5-217-216-85-80.sslip.io/login"],
 ];
 
 (async () => {
@@ -26,6 +23,23 @@ const sites = [
       console.log(`CAPTURING ${slug} ...`);
       await page.goto(url, { waitUntil: "domcontentloaded", timeout: 60000 });
       await page.waitForTimeout(5000);
+      await page.getByText("Welcome Back").waitFor({ timeout: 20000 }).catch(() => {});
+      await page.waitForTimeout(1500);
+      // Dismiss cookie/ad modals so the hero is visible
+      for (const sel of [
+        'button:has-text("Later")',
+        'button:has-text("Close")',
+        '[aria-label="Close"]',
+        'button:has-text("×")',
+        'button:has-text("x")',
+      ]) {
+        const btn = page.locator(sel).first();
+        if (await btn.isVisible().catch(() => false)) {
+          await btn.click({ timeout: 2000 }).catch(() => {});
+          await page.waitForTimeout(800);
+          break;
+        }
+      }
       await page.screenshot({ path: file, type: "jpeg", quality: 78, fullPage: false });
       console.log(`OK ${slug} (${Math.round(fs.statSync(file).size / 1024)}kb)`);
     } catch (err) {

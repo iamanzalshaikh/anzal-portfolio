@@ -40,6 +40,15 @@ const projectsData: ProjectItem[] = [
     features: ['Area Agent Network', 'Membership & Flash Deals', 'Leads & Earnings Hub', 'Wallet & Payouts']
   },
   {
+    title: 'EGC Workforce – Attendance & Auth Core',
+    type: 'saas',
+    description: 'Workforce management portal with hardware-verified biometrics, WebAuthn, geo-fenced attendance, and AES-256 device tracking for EGC India operations.',
+    tags: ['SaaS', 'Workforce', 'WebAuthn', 'Geo-Fence'],
+    liveUrl: 'https://workforce.egcindia.in/auth/login',
+    image: "/projects/websites/egc-workforce.jpg",
+    features: ['WebAuthn & Biometrics', 'Geo-Fenced Attendance', 'AES-256 Device Tracking', 'Secure Staff Auth']
+  },
+  {
     title: 'Clawbot – AI Lead Management System',
     type: 'saas',
     description: 'An intelligent full-stack AI lead management platform featuring automated sales pipelines, role-based controls, and detailed performance dashboards.',
@@ -65,6 +74,15 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://workspace.rootsatelier.in/login',
     image: "/projects/websites/roots-os.jpg",
     features: ['Secure Workspace Login', 'Atelier Operations Hub', 'Team Access Control', 'Studio Workflow Portal']
+  },
+  {
+    title: 'Westmere – Lead Intelligence',
+    type: 'saas',
+    description: 'Lead intelligence admin panel for Google Places discovery, website crawl for emails/phones, and Cloudinary exports — same ops shell as production admin panels.',
+    tags: ['SaaS', 'Lead Intelligence', 'Data Enrichment', 'Scraping'],
+    liveUrl: 'https://datascrapper-web-cp9thj-5a5ac5-217-216-85-80.sslip.io/login',
+    image: "/projects/websites/westmere.jpg",
+    features: ['Google Places Discovery', 'Email & Phone Crawl', 'Cloudinary Exports', 'Secure Admin Auth']
   },
   // Professional Projects
   {
@@ -138,6 +156,43 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://pos-frontend-rudu.onrender.com/',
     image: "/projects/websites/apexpos.jpg",
     features: ['Lightning-fast Billing Grid', 'Real-time Stock Tracking', 'Rich Revenue Analytics', 'Multi-Terminal Syncing']
+  },
+  {
+    title: 'Zunivo – Spontaneous Plans Social',
+    type: 'mobile',
+    description: 'Social hangout app to see who’s free, go live with friends, share invite links, and chat in hangout inboxes — plus a staff console for people, reports, and audit.',
+    tags: ['Social', 'React Native', 'Hangouts', 'Staff Console'],
+    liveUrl: '#',
+    images: [
+      "/projects/zunivo/zunivo_1.png",
+      "/projects/zunivo/zunivo_2.png",
+      "/projects/zunivo/zunivo_3.png",
+      "/projects/zunivo/zunivo_4.png",
+      "/projects/zunivo/zunivo_5.png",
+      "/projects/zunivo/zunivo_6.png",
+      "/projects/zunivo/zunivo_7.png",
+      "/projects/zunivo/zunivo_8.png",
+    ],
+    objectFit: 'contain',
+    features: ['Who’s Free & Go Live', 'Friends, Invites & Inbox', 'Hangout Chat Lifecycle', 'Staff Reports & People Desk']
+  },
+  {
+    title: 'Orbit Duo – Sync Dodge Game',
+    type: 'mobile',
+    description: 'Neon dual-orb sync game with solo and 2-player dodge modes, worlds map, skin locker, ranks, cloud save, and tethered duo gameplay.',
+    tags: ['Mobile Game', 'React Native', 'Duo Multiplayer', 'Cloud Save'],
+    liveUrl: '#',
+    images: [
+      "/projects/orbit/orbit_1.jpg",
+      "/projects/orbit/orbit_2.jpg",
+      "/projects/orbit/orbit_4.jpg",
+      "/projects/orbit/orbit_5.jpg",
+      "/projects/orbit/orbit_6.jpg",
+      "/projects/orbit/orbit_7.jpg",
+      "/projects/orbit/orbit_8.jpg",
+    ],
+    objectFit: 'contain',
+    features: ['Solo Sync & Duo Touch Modes', 'Worlds Map & Level Stars', 'Skin Locker & Ranks', 'Cloud Save Profile']
   },
   {
     title: 'Mirror Mind – AI Cognitive Companion',
@@ -431,14 +486,23 @@ const projectsData: ProjectItem[] = [
     features: ['Diamond Collection Catalog', 'Occasion-Based Shopping', 'Studio Consultation Booking', 'Certified Jewellery Story']
   },
   {
-    title: 'AECCI – Asian Exporters Chamber Portal',
+    title: 'AECCI – Global Trade Platform',
     type: 'professional',
-    isLandingPage: true,
-    description: 'Premium trade portal for the Asian Exporters\' Chamber of Commerce and Industry covering membership, export services, and global commerce programs.',
-    tags: ['Trade Portal', 'Corporate Web', 'React.js', 'Export'],
+    description: 'Chamber-backed B2B trade portal connecting verified Indian exporters with global buyers through curated deal rooms, partner-country networks, and post-meeting support.',
+    tags: ['Trade Portal', 'B2B Platform', 'React.js', 'Export'],
     liveUrl: 'https://www.aecci.org.in/',
     image: "/projects/websites/aecci.jpg",
-    features: ['Export Membership Hub', 'Trade Program Showcase', 'Chamber Corporate Portal', 'Global Commerce Presence']
+    features: ['Global Deal Rooms', 'Exporter–Buyer Matching', '55+ Partner Countries', 'Chamber-Verified Profiles']
+  },
+  {
+    title: 'Socio5 – Performance Marketing Studio',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Performance marketing studio site for ads, SEO, UGC, social, influencer campaigns, and website development — with published plans, client proof, and WhatsApp enquiry flows.',
+    tags: ['Agency', 'Performance Marketing', 'Next.js', 'Lead Gen'],
+    liveUrl: 'https://www.socio5marketing.in/',
+    image: "/projects/websites/socio5.jpg",
+    features: ['Ads, SEO & Social Suites', 'Published Pricing Plans', 'Client Proof & Reviews', 'WhatsApp Enquiry Flow']
   },
   {
     title: 'Nisha Dryfruits & Spices',

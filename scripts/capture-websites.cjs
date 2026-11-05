@@ -7,6 +7,8 @@ fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
   ["egc-shop", "https://shop.egcindia.in/"],
+  ["egc-workforce", "https://workforce.egcindia.in/auth/login"],
+  ["westmere", "https://datascrapper-web-cp9thj-5a5ac5-217-216-85-80.sslip.io/login"],
   ["clawbot", "https://clawbot-ai-lead.vercel.app/login"],
   ["restaurant-qr", "https://resturant-qr-saas.vercel.app/"],
   ["ai-interview", "https://ai-interview-5gz6.vercel.app/"],
@@ -25,6 +27,7 @@ const sites = [
   ["webcastle", "https://willowy-heliotrope-8af7b2.netlify.app/"],
   ["letscrack", "https://letscrack-frontend.onrender.com/"],
   ["aecci", "https://www.aecci.org.in/"],
+  ["socio5", "https://www.socio5marketing.in/"],
   ["outfit-theory", "https://outfit-theory-frontend.netlify.app/"],
   ["nisha", "https://nisha-frontend.vercel.app/"],
   ["supreme-kitchen", "https://modular-kitchen-nine.vercel.app/"],

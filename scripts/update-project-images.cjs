@@ -6,6 +6,8 @@ let t = fs.readFileSync(filePath, "utf8");
 
 const map = [
   ["EGC India Shopping Club", "/projects/websites/egc-shop.jpg"],
+  ["EGC Workforce – Attendance & Auth Core", "/projects/websites/egc-workforce.jpg"],
+  ["Westmere – Lead Intelligence", "/projects/websites/westmere.jpg"],
   ["Clawbot – AI Lead Management System", "/projects/websites/clawbot.jpg"],
   ["Restaurant QR SaaS", "/projects/websites/restaurant-qr.jpg"],
   ["AI Interview Simulator", "/projects/websites/ai-interview.jpg"],
@@ -22,7 +24,8 @@ const map = [
   ["WebYapar Solutions – IT Consulting & Digital Engineering", "/projects/websites/webyapar.jpg"],
   ["WebCastle UAE – Premier Web Engineering Agency", "/projects/websites/webcastle.jpg"],
   ["LetsCrack – Premium MCQ & Test Preparation Platform", "/projects/websites/letscrack.jpg"],
-  ["AECCI – Asian Exporters Chamber Portal", "/projects/websites/aecci.jpg"],
+  ["AECCI – Global Trade Platform", "/projects/websites/aecci.jpg"],
+  ["Socio5 – Performance Marketing Studio", "/projects/websites/socio5.jpg"],
   ["Outfit Theory – Curated Menswear", "/projects/websites/outfit-theory.jpg"],
   ["Nisha Dryfruits & Spices", "/projects/websites/nisha.jpg"],
   ["Supreme Kitchen – Modular Kitchens", "/projects/websites/supreme-kitchen.jpg"],
