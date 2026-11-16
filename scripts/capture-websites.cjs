@@ -9,6 +9,7 @@ const sites = [
   ["egc-shop", "https://shop.egcindia.in/"],
   ["egc-workforce", "https://workforce.egcindia.in/auth/login"],
   ["westmere", "https://datascrapper-web-cp9thj-5a5ac5-217-216-85-80.sslip.io/login"],
+  ["bionutra", "https://bionutra.vercel.app/"],
   ["clawbot", "https://clawbot-ai-lead.vercel.app/login"],
   ["restaurant-qr", "https://resturant-qr-saas.vercel.app/"],
   ["ai-interview", "https://ai-interview-5gz6.vercel.app/"],

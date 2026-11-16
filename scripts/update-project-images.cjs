@@ -8,6 +8,7 @@ const map = [
   ["EGC India Shopping Club", "/projects/websites/egc-shop.jpg"],
   ["EGC Workforce – Attendance & Auth Core", "/projects/websites/egc-workforce.jpg"],
   ["Westmere – Lead Intelligence", "/projects/websites/westmere.jpg"],
+  ["BioNutra Sciences – Botanical Shop", "/projects/websites/bionutra.jpg"],
   ["Clawbot – AI Lead Management System", "/projects/websites/clawbot.jpg"],
   ["Restaurant QR SaaS", "/projects/websites/restaurant-qr.jpg"],
   ["AI Interview Simulator", "/projects/websites/ai-interview.jpg"],

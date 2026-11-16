@@ -6,7 +6,7 @@ const outDir = path.join(__dirname, "..", "public", "projects", "websites");
 fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
-  ["westmere", "https://datascrapper-web-cp9thj-5a5ac5-217-216-85-80.sslip.io/login"],
+  ["bionutra", "https://bionutra.vercel.app/"],
 ];
 
 (async () => {
@@ -27,6 +27,9 @@ const sites = [
       await page.waitForTimeout(1500);
       // Dismiss cookie/ad modals so the hero is visible
       for (const sel of [
+        'button:has-text("Accept cookies")',
+        'button:has-text("Accept")',
+        'button:has-text("Decline")',
         'button:has-text("Later")',
         'button:has-text("Close")',
         '[aria-label="Close"]',

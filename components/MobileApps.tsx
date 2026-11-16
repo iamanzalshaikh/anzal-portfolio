@@ -20,6 +20,50 @@ interface MobileProject {
 
 const mobileProjects: MobileProject[] = [
   {
+    title: 'Casa Go Customer – Ride Booking App',
+    platform: 'Rider Ride-Hailing Mobile App',
+    description: 'Plan city, airport, or multi-stop rides, pick Bike or Auto with live fares, match verified drivers, track My Rides, and reach CasaGo Concierge support.',
+    tags: ['React Native', 'Ride Hailing', 'Customer App', 'Maps'],
+    features: [
+      'Where-to planner with schedule options',
+      'Bike & Auto quotes with cash checkout',
+      'Live finding-driver tracking',
+      'My Rides, Concierge support & profile SOS'
+    ],
+    images: [
+      "/projects/casago-customer/customer_1.jpg",
+      "/projects/casago-customer/customer_2.jpg",
+      "/projects/casago-customer/customer_3.jpg",
+      "/projects/casago-customer/customer_4.jpg",
+      "/projects/casago-customer/customer_5.jpg",
+      "/projects/casago-customer/customer_6.jpg",
+      "/projects/casago-customer/customer_7.jpg",
+    ],
+    accentColor: "from-lime-600 to-emerald-800"
+  },
+  {
+    title: 'Casa Go Driver – Ride Ops App',
+    platform: 'Driver Ride-Hailing Mobile App',
+    description: 'Go online, navigate live trips, track history and earnings, manage prepaid wallet cashouts, message riders, and keep a verified driver profile.',
+    tags: ['React Native', 'Ride Hailing', 'Driver App', 'Wallet'],
+    features: [
+      'Online map home with trip stats',
+      'Live arrival navigation & SOS',
+      'Trip history, wallet & bank cashout',
+      'Rider inbox & verified profile desk'
+    ],
+    images: [
+      "/projects/casago/casago_1.jpg",
+      "/projects/casago/casago_2.jpg",
+      "/projects/casago/casago_3.jpg",
+      "/projects/casago/casago_4.jpg",
+      "/projects/casago/casago_5.jpg",
+      "/projects/casago/casago_6.jpg",
+      "/projects/casago/casago_7.jpg",
+    ],
+    accentColor: "from-emerald-700 to-lime-600"
+  },
+  {
     title: 'Zunivo – Spontaneous Plans Social',
     platform: 'Friends & Hangouts Mobile App',
     description: 'See who’s free, go live with coffee/gaming/walk plans, invite friends, and chat in hangout inboxes — backed by a staff console for people, reports, and audit.',

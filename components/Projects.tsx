@@ -158,6 +158,42 @@ const projectsData: ProjectItem[] = [
     features: ['Lightning-fast Billing Grid', 'Real-time Stock Tracking', 'Rich Revenue Analytics', 'Multi-Terminal Syncing']
   },
   {
+    title: 'Casa Go Customer – Ride Booking App',
+    type: 'mobile',
+    description: 'Rider app to plan city/airport/multi-stop trips, choose Bike or Auto, track live driver matching, manage rides, support concierge, and SOS contacts.',
+    tags: ['React Native', 'Ride Hailing', 'Customer App', 'Maps'],
+    liveUrl: '#',
+    images: [
+      "/projects/casago-customer/customer_1.jpg",
+      "/projects/casago-customer/customer_2.jpg",
+      "/projects/casago-customer/customer_3.jpg",
+      "/projects/casago-customer/customer_4.jpg",
+      "/projects/casago-customer/customer_5.jpg",
+      "/projects/casago-customer/customer_6.jpg",
+      "/projects/casago-customer/customer_7.jpg",
+    ],
+    objectFit: 'contain',
+    features: ['Where-to Ride Planner', 'Bike & Auto Fare Quotes', 'Live Driver Matching', 'Rides, Support & Profile']
+  },
+  {
+    title: 'Casa Go Driver – Ride Ops App',
+    type: 'mobile',
+    description: 'Driver app for live trip navigation, trip history, prepaid wallet, online earnings cashout, rider inbox, and verified profile compliance.',
+    tags: ['React Native', 'Ride Hailing', 'Driver App', 'Wallet'],
+    liveUrl: '#',
+    images: [
+      "/projects/casago/casago_1.jpg",
+      "/projects/casago/casago_2.jpg",
+      "/projects/casago/casago_3.jpg",
+      "/projects/casago/casago_4.jpg",
+      "/projects/casago/casago_5.jpg",
+      "/projects/casago/casago_6.jpg",
+      "/projects/casago/casago_7.jpg",
+    ],
+    objectFit: 'contain',
+    features: ['Online Map & Trip Nav', 'Trip History & Earnings', 'Prepaid Wallet & Cashout', 'Rider Inbox & Verified Profile']
+  },
+  {
     title: 'Zunivo – Spontaneous Plans Social',
     type: 'mobile',
     description: 'Social hangout app to see who’s free, go live with friends, share invite links, and chat in hangout inboxes — plus a staff console for people, reports, and audit.',
@@ -503,6 +539,15 @@ const projectsData: ProjectItem[] = [
     liveUrl: 'https://www.socio5marketing.in/',
     image: "/projects/websites/socio5.jpg",
     features: ['Ads, SEO & Social Suites', 'Published Pricing Plans', 'Client Proof & Reviews', 'WhatsApp Enquiry Flow']
+  },
+  {
+    title: 'BioNutra Sciences – Botanical Shop',
+    type: 'professional',
+    description: 'Science-led botanical supplements storefront with goal-based categories, documented formulas, EU shipping, and a consultation-first shopping experience.',
+    tags: ['E-Commerce', 'Health', 'Next.js', 'Vercel'],
+    liveUrl: 'https://bionutra.vercel.app/',
+    image: "/projects/websites/bionutra.jpg",
+    features: ['Goal-Based Formula Shop', 'Clean-Label Product Pages', 'EU Delivery & Returns', 'Find-Your-Formula Flow']
   },
   {
     title: 'Nisha Dryfruits & Spices',
