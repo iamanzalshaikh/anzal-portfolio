@@ -6,7 +6,9 @@ const outDir = path.join(__dirname, "..", "public", "projects", "websites");
 fs.mkdirSync(outDir, { recursive: true });
 
 const sites = [
-  ["bionutra", "https://bionutra.vercel.app/"],
+  ["bluetrust", "https://www.bluetrustworkforce.com/"],
+  ["spotly", "https://spotly.egcindia.in/"],
+  ["promisebook", "https://promisebook.egcindia.in/"],
 ];
 
 (async () => {

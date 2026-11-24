@@ -405,6 +405,34 @@ const projectsData: ProjectItem[] = [
     features: ['Trade Compliance', 'Logistics Automation', 'HS Validation', 'Secure Documentation']
   },
   {
+    title: 'BlueTrust Workforce – Recruitment Portal',
+    type: 'professional',
+    isLandingPage: true,
+    description: 'Mumbai-based workforce and recruitment partner for blue-collar, grey-collar, and supervisory talent with structured hiring and compliance-ready placement.',
+    tags: ['Recruitment', 'Workforce', 'Corporate Web', 'Lead Gen'],
+    liveUrl: 'https://www.bluetrustworkforce.com/',
+    image: "/projects/websites/bluetrust.jpg",
+    features: ['Blue & Grey-Collar Hiring', '6-Step Recruitment Process', 'Industry-Focused Talent', 'Hire Talent CTA Flows']
+  },
+  {
+    title: 'Spotly – Local Verification Rewards',
+    type: 'professional',
+    description: 'Ground-check micro-task platform where users verify nearby shops, ATMs, and venues in 2 minutes and cash out instantly via UPI.',
+    tags: ['Gig Economy', 'UPI Rewards', 'Geo Verification', 'EGC'],
+    liveUrl: 'https://spotly.egcindia.in/',
+    image: "/projects/websites/spotly.jpg",
+    features: ['2-Min Micro Tasks', 'Instant UPI Cashouts', 'Peer Consensus Checks', 'Mobile Auth Portal']
+  },
+  {
+    title: 'Promise Book – Order Commitment Hub',
+    type: 'professional',
+    description: 'Commitment and order management platform for tracking promises, orders, and customer relationships in one clean ops workspace.',
+    tags: ['Order Management', 'CRM', 'Operations', 'EGC'],
+    liveUrl: 'https://promisebook.egcindia.in/',
+    image: "/projects/websites/promisebook.jpg",
+    features: ['Promise Tracking', 'Order Management', 'Customer Relationships', 'Ops Workspace UI']
+  },
+  {
     title: 'GoShah – Premium Car Rentals',
     type: 'professional',
     description: 'Experience luxury at every mile with Mumbai\'s elite car rental service featuring a premium fleet and transparent pricing.',
