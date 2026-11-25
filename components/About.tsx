@@ -79,7 +79,7 @@ const About = () => {
             <div className="space-y-8">
               {[
                 { label: "Years Experience", value: "1+", icon: "timer" },
-                { label: "Projects Completed", value: "10+", icon: "rocket_launch" },
+                { label: "Projects Completed", value: "60+", icon: "rocket_launch" },
                 { label: "Lines of Code", value: "50k+", icon: "code" },
               ].map((stat, idx) => (
                 <div key={idx} className="group">

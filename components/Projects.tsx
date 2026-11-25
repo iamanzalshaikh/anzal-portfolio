@@ -832,10 +832,23 @@ const ImageModal = ({ images, index, onClose, setIndex }: { images: string[], in
   );
 };
 
+const countByFilter = (id: string) => {
+  if (id === "all") return projectsData.length;
+  if (id === "landing-page") {
+    return projectsData.filter((p) => p.isLandingPage || p.type === "landing-page").length;
+  }
+  if (id === "professional") {
+    return projectsData.filter((p) => p.type === "professional" && !p.isLandingPage).length;
+  }
+  return projectsData.filter((p) => p.type === id).length;
+};
+
 const Projects = () => {
   const [filter, setFilter] = useState("all");
   const [selectedImages, setSelectedImages] = useState<string[] | null>(null);
   const [modalIndex, setModalIndex] = useState(0);
+
+  const totalProjects = projectsData.length;
 
   const filteredProjects = (() => {
     // All Cases = every project (big apps first, landing pages last)
@@ -844,7 +857,9 @@ const Projects = () => {
         ? [...projectsData]
         : filter === "landing-page"
           ? projectsData.filter((p) => p.isLandingPage || p.type === "landing-page")
-          : projectsData.filter((p) => p.type === filter);
+          : filter === "professional"
+            ? projectsData.filter((p) => p.type === "professional" && !p.isLandingPage)
+            : projectsData.filter((p) => p.type === filter);
 
     return list.sort((a, b) => getProjectRank(a) - getProjectRank(b));
   })();
@@ -891,9 +906,13 @@ const Projects = () => {
             className="text-5xl md:text-6xl font-black text-white mb-6"
           >
             Projects
+            <span className="ml-3 align-middle text-2xl md:text-3xl font-bold text-primary">
+              {totalProjects}
+            </span>
           </motion.h1>
           <p className="text-xl text-slate-400 font-light max-w-2xl leading-relaxed">
-            A showcase of my engineering journey across professional and personal boundaries.
+            {filteredProjects.length} of {totalProjects} projects
+            {filter !== "all" ? " in this filter" : ""} — full engineering showcase across SaaS, mobile, and client work.
           </p>
         </div>
 
@@ -906,19 +925,29 @@ const Projects = () => {
             { id: "landing-page", label: "Landing Pages" },
             { id: "mobile", label: "Mobile Apps" },
             { id: "personal", label: "Personal" }
-          ].map((tab) => (
+          ].map((tab) => {
+            const count = countByFilter(tab.id);
+            return (
             <button
               key={tab.id}
               onClick={() => setFilter(tab.id)}
-              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 flex-shrink-0 ${
+              className={`px-4 sm:px-6 py-2 sm:py-2.5 rounded-lg text-xs sm:text-sm font-bold transition-all duration-300 flex-shrink-0 inline-flex items-center gap-2 ${
                 filter === tab.id 
                   ? "bg-primary text-background-dark shadow-glow" 
                   : "text-slate-400 hover:text-primary"
               }`}
             >
               {tab.label}
+              <span className={`min-w-[1.25rem] px-1.5 py-0.5 rounded-md text-[10px] font-black ${
+                filter === tab.id
+                  ? "bg-background-dark/20 text-background-dark"
+                  : "bg-slate-800 text-slate-300"
+              }`}>
+                {count}
+              </span>
             </button>
-          ))}
+            );
+          })}
         </div>
       </div>
 
